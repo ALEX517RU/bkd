@@ -1,0 +1,5 @@
+﻿User-agent: *
+Sitemap: https://bkdrf.ru/sitemap.xml
+Crawl-delay: 2
+Disallow: /stand
+Host: bkdrf.ru
