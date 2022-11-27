@@ -727,32 +727,7 @@
 
 
 
-<script>
-    $(document).ready(function () {
 
-        var defColor = "a3cf62";
-        var strokeColor = "C8DBAD";
-
-        $('input, select').styler();
-
-        $(".tabs li a").on("click", function () {
-            $this = $(this).parent().index();
-            $(".tabs li, .tabs-data .item").removeClass('active');
-            $(this).parent().addClass('active');
-            $(".tabs-data .item:eq(" + $this + ")").addClass('active');
-            return false;
-        });
-
-        $(".tabs-map li a").on("click", function () {
-            $this = $(this).parent().index();
-            $(".tabs-map li, .tabs-map-data .item").removeClass('active');
-            $(this).parent().addClass('active');
-            $(".tabs-map-data .item:eq(" + $this + ")").addClass('active');
-            return false;
-        });
-
-       
-</script>
 
 <div class="main_content_wp opinion_bg">
     <div class="container" style="padding-bottom:0; padding-top:0; margin-right: 0;">
@@ -1006,11 +981,11 @@
 
 
   
-    <div class="map">
-        <div id="map" style="width: 100%; height: 100%";></div>
-
-
-    <script type="text/javascript">
+<div class="map">
+    <div id="map" style="width: 100%; height: 100%"
+</div>
+</div>
+<script type="text/javascript">
 var
   osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
   osmUrl2 = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png',
@@ -3312,15 +3287,11 @@ var latlngs = [
 var polyline = L.polyline(latlngs, {color: '#92D34D', opacity: 0.95, weight: 7}).bindTooltip("<big>Ремонт а/д №49H-1139<br>Ильмень - Козынево<br>км 0+000 - км 2+000<br>в Новгородском районе</big>", { 
   sticky: true,  offset: [10, 0],     ...TooltipClass // using spread operator (ES2018)
   }, TooltipClass).addTo(map);
+</script>
 
 
 
-
-
- </script>
-
-
-
+</div>
 <div id="tooltip">
 
 </div>
