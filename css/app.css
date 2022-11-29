@@ -1578,10 +1578,9 @@ h1,
     margin-top: -2rem;
     
   }
-
-  .h4 {
+  body {
     font-family: "ALS Sector";
-}
+  }
 }
 
 @media (max-width: 600px) {
