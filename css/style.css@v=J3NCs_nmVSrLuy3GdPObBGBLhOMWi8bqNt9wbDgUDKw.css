@@ -119,8 +119,8 @@ a:hover {
 }
 
 @font-face {
-    font-family: 'robotobold';
-    src: url('../fonts/roboto-bold.ttf') format('truetype');
+    font-family: 'ALS Sector';
+    src: url('../fonts/ALSSectorRegular-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
