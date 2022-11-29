@@ -7,7 +7,7 @@
 
 <html lang="ru">
 <head>
-    <link href="//db.onlinewebfonts.com/c/0915cee867624e0c356dd676beb2dcee?family=ALS+Sector" rel="stylesheet" type="text/css"/>
+
 <style>
     h4 {
         font-family: "ALS Sector";
@@ -92,10 +92,21 @@
             width: 50%;
         }
 
-        body {
-            font-family: "ALS Sector", sans-serif;
-        }
+@font-face {
+  font-family: "ALS Sector";
+  font-style: normal;
 
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("ALS Sector"),
+       /* Если не получилось, загрузит woff2 */
+       url("/fonts/ALSSectorRegular-Regular.ttf") format("ttf");
+
+}
+
+/* Теперь можно использовать шрифт */
+body {
+  font-family: "ALS Sector", sans-serif;
+}    
         
 p
 {
