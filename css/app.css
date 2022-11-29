@@ -918,7 +918,8 @@ h1,
   } 
 
   .header__city {
-    display: none;
+    display: block;
+    margin-top: 3em;
   }
 
   .header__search {
