@@ -1556,7 +1556,7 @@ h1,
 
 @media (max-width: 1000px) {
   .nav-tools__list {
-    padding: 0 -1rem;
+    padding: 0 1rem;
   }
 
   .nav-tools__list {
@@ -1575,7 +1575,7 @@ h1,
 
 @media (max-width: 767px) {
   .nav-tools {
-    margin: 2rem 0 0;
+    margin: -2rem 0 0;
     
   }
 }
