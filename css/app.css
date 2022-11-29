@@ -1578,9 +1578,12 @@ h1,
     margin-top: -2rem;
     
   }
-  body {
-    font-family: "ALS Sector";
-  }
+  
+}
+
+@font-face {
+  font-family: 'ALS Sector';
+  src: url('fonts/ALSSectorRegular-Regular.ttf');
 }
 
 @media (max-width: 600px) {
