@@ -1575,7 +1575,7 @@ h1,
 
 @media (max-width: 767px) {
   .nav-tools {
-    margin: 0rem 0 0;
+    margin-top: -2rem;
     
   }
 }
