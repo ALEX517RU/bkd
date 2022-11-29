@@ -96,19 +96,13 @@
             width: 50%;
         }
     @import url('//db.onlinewebfonts.com/c/0915cee867624e0c356dd676beb2dcee?family=ALS+Sector');
-@font-face {
-  font-family: "ALS Sector";
-  font-style: normal;
-
-  /* Браузер сначала попробует найти шрифт локально */
-       /* Если не получилось, загрузит woff2 */
-      src: url("fonts/ALSSectorRegular-Regular.ttf") format("ttf"),
-       url("fonts/ALS Sector Regular Regular.woff2") format("woff2"),
-       url("fonts/ALS Sector Regular Regular.svg") format("svg"),
-       url("fonts/ALS Sector Regular Regular.eot") format("eot"),
-       /* Если браузер не поддерживает woff2, загрузит woff */
-       url("fonts/ALS Sector Regular Regular.woff") format("woff");
-
+    @font-face {font-family: "ALS Sector Regular Regular";
+  src: url("595030bb520f1e2ab2fb4e8d7c5f30a5.eot"); /* IE9*/
+  src: url("595030bb520f1e2ab2fb4e8d7c5f30a5.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("595030bb520f1e2ab2fb4e8d7c5f30a5.woff2") format("woff2"), /* chrome、firefox */
+  url("595030bb520f1e2ab2fb4e8d7c5f30a5.woff") format("woff"), /* chrome、firefox */
+  url("595030bb520f1e2ab2fb4e8d7c5f30a5.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("595030bb520f1e2ab2fb4e8d7c5f30a5.svg#ALS Sector Regular Regular") format("svg"); /* iOS 4.1- */
 }
 
 /* Теперь можно использовать шрифт */
