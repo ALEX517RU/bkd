@@ -1581,10 +1581,6 @@ h1,
   
 }
 
-@font-face {
-  font-family: 'ALS Sector';
-  src: url('../fonts/ALSSectorRegular-Regular.ttf');
-}
 
 @media (max-width: 600px) {
   .nav-tools__list {
