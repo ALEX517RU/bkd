@@ -103,7 +103,10 @@
   /* Браузер сначала попробует найти шрифт локально */
   src: local("ALS Sector"),
        /* Если не получилось, загрузит woff2 */
-       url("/fonts/ALSSectorRegular-Regular.ttf") format("ttf");
+       url("/fonts/ALSSectorRegular-Regular.ttf") format("ttf"),
+       url("/fonts/ALS Sector Regular Regular.woff2") format("woff2"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("/fonts/ALS Sector Regular Regular.woff") format("woff");
 
 }
 
