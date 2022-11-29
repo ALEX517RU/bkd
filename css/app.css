@@ -519,7 +519,7 @@ h1,
 }
 
 .header__actions-login-link {
-  display: flex;
+  display: none;
   align-items: baseline;
 }
 
@@ -2968,7 +2968,7 @@ span.region-widget__news-all-news-arrow svg {
 
 @media (max-width: 600px) {
     .letsee-active .nav-tools__item {
-        width: 50%;
+        width: 0%;
     }
 
     .letsee-active .header__actions-login-link .svg-icon {
