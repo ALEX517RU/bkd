@@ -90,14 +90,33 @@
         .header__city {
             width: 50%;
         }
+
+p {
+   font-family: Arial,Helvetica,sans-serif;
+}
+
+@media only screen and (min-width: 980px) {
+   @font-face {
+      font-family: "OctinSports";
+      src: url("fonts/octinsports.eot");
+      src: url("fonts/octinsports.eot?#iefix") format("embedded-opentype"),
+      url("fonts/octinsports.woff") format("woff"),
+      url("fonts/octinsports.ttf") format("truetype"),
+      url("fonts/octinsports.svg#OctinSports") format("svg");
+      font-weight: normal;
+      font-style: normal;
+   }
+
+   p {
+      font-family: "OctinSports";
+   }
+}
 p
 {
-font-family: "ALS Sector";
 font-size: 19px;
 text-align: left!important;
 }
 h1 {
-font-family: "ALS Sector";
 font-size: 25px !important;
 }
 h2 {
@@ -107,7 +126,6 @@ h3 {
 font-size: 16px !important;
 }
 h4 {
-    font-family: "ALS Sector";
     font-size: 5px;
     margin-top: 10px;
 }
