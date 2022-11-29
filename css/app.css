@@ -515,7 +515,7 @@ h1,
 }
 
 .header__actions-login {
-  font-size: 0rem;
+  font-size: rem;
 }
 
 .header__actions-login-link {
@@ -1568,14 +1568,14 @@ h1,
   }
 
   .nav-tools__item-link {
-    padding: 3rem 0 4rem;
+    padding: 0rem 0 4rem;
   }
   
 }
 
 @media (max-width: 767px) {
   .nav-tools {
-    margin: -2rem 0 0;
+    margin: 2rem 0 0;
     
   }
 }
