@@ -1576,9 +1576,12 @@ h1,
 @media (max-width: 767px) {
   .nav-tools {
     margin-top: -2rem;
-    font-family: "ALS Sector";
     
   }
+
+  .h4 {
+    font-family: "ALS Sector";
+}
 }
 
 @media (max-width: 600px) {
