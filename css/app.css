@@ -28,6 +28,7 @@ html {
 @media (max-width: 1279px) {
   html {
     font-size: 8.5px;
+    font-family: "ALS Sector Regular Regular";
   }
 }
 
@@ -96,6 +97,7 @@ h1,
 @media (max-width: 767px) {
   .container {
     padding: 0 1rem;
+    font-family: "ALS Sector Regular Regular";
   }
 }
 
@@ -696,6 +698,7 @@ h1,
   .header__title {
     margin: 3rem 0 2.5rem;
     text-align: center;
+    font-family: "ALS Sector Regular Regular";
   }
 
   .header__title-text {
