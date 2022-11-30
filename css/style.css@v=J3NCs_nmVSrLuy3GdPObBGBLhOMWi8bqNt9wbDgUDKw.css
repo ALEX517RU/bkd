@@ -1403,7 +1403,7 @@ h1 {
 }
 
 .quiz_top h1 {
-    font: 42px 'gilroybold';
+    font: 42px 'ALS Sector Regular Regular';
     color: #000;
 }
 
@@ -6466,6 +6466,7 @@ h1.header_title {
         font-size: 16px;
         line-height: 20px;
         max-width: 230px;
+        font-family: 'ALS Sector Regular Regular';
     }
 
     .header_content {
@@ -6480,6 +6481,7 @@ h1.header_title {
         font-size: 14px;
         line-height: 16px;
         max-width: 200px;
+        font-family: 'ALS Sector Regular Regular';
     }
 
     .header_logo {
