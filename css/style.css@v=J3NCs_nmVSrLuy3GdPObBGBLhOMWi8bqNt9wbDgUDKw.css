@@ -39,7 +39,7 @@ abbr, acronym {
 }
 
 body {
-    font: 16px 'gilroyregular' !important;
+    font: 16px "ALS Sector Regular Regular";
     background: #fff;
     color: #2b2e4c;
     min-width: 1400px;
@@ -119,7 +119,7 @@ a:hover {
 }
 
 @font-face {
-    font-family: 'ALS Sector';
+    font-family: 'ALS Sector Regular Regular';
     src: url('../fonts/ALSSectorRegular-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -491,7 +491,7 @@ header {
     }
 
 h1 {
-    font: 70px 'gilroybold';
+    font: 70px "ALS Sector Regular Regular";
     color: #fff;
     text-transform: uppercase;
 }
@@ -534,7 +534,7 @@ h1 {
 
 .nrt_title {
     text-transform: uppercase;
-    font: 32px 'gilroybold';
+    font: 32px "ALS Sector Regular Regular";
 }
 
 .nrt_link {
