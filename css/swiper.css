@@ -12,6 +12,20 @@
  * 
  * Released on: February 7, 2016
  */
+
+ @media (max-width: 1100px) {
+  .swiper-slide {
+    width: 368px;
+  }
+ }
+
+ @media only screen and (max-device-width: 480px) {
+  .swiper-slide {
+    width: 368px;
+  }
+ }
+
+
 .swiper-container {
   margin: 0 auto;
   position: relative;

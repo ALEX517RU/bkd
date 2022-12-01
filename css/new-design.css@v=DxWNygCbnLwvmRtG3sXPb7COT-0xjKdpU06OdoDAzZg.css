@@ -63,7 +63,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 1.3em;
+    padding-bottom: 0em;
     border-bottom: 2px solid #C6C6C5;
 }
 
@@ -284,6 +284,14 @@
     color: #DCAA44;
 }
 
+
+.glav {
+    font-size: 15px;
+    text-decoration: underline;
+    transition: .2s;
+    text-align: right;
+}
+
 @media (max-width: 767px) {
     .header__city-popup-list.city-list {
         columns: 2;
@@ -416,9 +424,6 @@
     overflow: hidden;
 }
 
-.header__socials-link:first-child {
-    margin-left: 0;
-}
 
 .header__socials-link svg {
     transition: .2s;
@@ -433,7 +438,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: baseline;
-    padding: 2em 0 0;
+    padding: 0em 0 0;
     font-weight: 400;
 }
 
@@ -787,6 +792,16 @@
         height: 12em;
     }
 
+    .glav {
+        font-size: 11px;
+        transition: .2s;
+        text-align: right;
+        text-decoration: underline;
+        display: block;
+        margin-top: 8px;
+        height: 20px;
+    }
+
     body.has-nav-opened {
         overflow: hidden;
     }
@@ -1064,6 +1079,11 @@
 
     .letsee-active .mobile-nav__list {
         height: calc(100% - 200px);
+    }
+
+    .header__socials-link img {
+        height: 15px;
+        margin-top: 5px;
     }
 }
 
