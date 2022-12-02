@@ -58,7 +58,227 @@
 
     <link media="all" rel="stylesheet" type="text/css" href="js/simpleLightBox.min.css" />
 
-    
+    <style>
+.mob_1 {
+    font-family: "ALS Sector Regular Regular";  
+}
+
+.mob_2 {
+    font-family: "ALS Sector Regular Regular"; 
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .show_mobile .dm_link {
+    display: none;
+  }
+
+  .mob_social {
+    display: none;
+  }
+
+  .map_modal {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .modal_fraginfo {
+    right: 0px;
+    position: absolute;
+  }
+
+  .modal_historyinfo {
+    left: 30px;
+    top: 60px;
+    position: absolute;
+  }
+}
+
+.mobile_modal_wp {
+    width: 320px;
+    box-sizing: border-box;
+}
+
+    .mobile_modal_wp + .fancybox-close-small {
+        top: 3px;
+        right: 5px;
+    }
+
+#mobile_modal {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.popup1 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease 0s;
+}
+.popup1:target {
+    opacity: 1;
+    visibility: visible;
+}
+.popup1:target .popup_content {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+.popup_area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+.popup_body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 30px 10px 10px;
+    transition: all 0.8s ease 0s;
+}
+.popup_content {
+    background-color: #fff;
+    color: #000;
+    max-width: 1007px;
+    padding: 0px;
+    position: relative;
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    transform: translate(0px, -100%);
+}
+.popup_close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: rgb(172, 172, 172);
+    text-decoration: none;
+}
+.popup_title {
+    font-size: 25px;
+    padding: 30px;
+    justify-content: left;
+    margin: 0px 0px 0px 0px;
+}
+.srok {
+    font-size: 15px;
+    padding-bottom: 5px;
+    color: #e48338;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.image-slider_image :last-child {
+    margin-right: 0px;
+}
+.popup_img {
+    float: left;
+    margin-right: 7px;
+    text-align: center;
+}
+
+.popup_text {
+    align-items: center;
+    padding: 20px 0;
+}
+
+.popup_title {
+    font-weight: 700;
+}
+
+
+.leaflet-tooltip {
+	font-family: 'ALS Sector';
+	font-size: 15px;
+	line-height: 19px;
+	position: absolute;
+	padding: 6px;
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	color: #222;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+	}
+
+
+
+@media (max-width: 1100px) {
+
+.header__city {
+  display: block;
+  margin-top: 3em;
+  padding-left: 3em;
+  font-size: 1.0em;
+  line-height: 1.5em;
+  font-weight: 300;
+  letter-spacing: .04em;
+  display: flex;
+  align-items: flex-end;
+}
+
+
+
+
+.header__socials {
+  display: block;
+  margin-left: 30px;
+  margin-right: -10px;
+  margin-top: -10px;
+  width: 54px;
+}
+
+.header__socials-link {
+  height: 15px;
+}
+
+.header__socials-link img {
+  height: 15px;
+}
+
+.popup_img {
+  width: 48%;
+}
+
+.popup_content {
+  width: 100%;
+}
+
+.popup_body {
+  padding: 0 0 0 0;
+}
+.swiper-slide {
+  width: 100%;
+  margin-right: 0px;
+}
+
+
+
+}
+
+
+
+
+
+    </style>
 
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/swiper.jquery.min.js@v=JUiO3AMUvYe2uIaHUQ9wZDoMBDSnAI2EQ_glC7Psf1o"></script>
@@ -80,6 +300,8 @@
 </head>
 
 <body>
+
+
     <div class="page_wp">
 
         <div class="mob_btn">
@@ -91,117 +313,82 @@
         </div>
 
 
+
+
 <header class="header">
     <div class="header__container container">
         <div class="header__top-line">
             <div class="header__logo-wrap">
-                <a class="header__logo" href="index.html" data-js="logo">
+                <a class="header__logo">
                         <span class="header__logo-image"></span>
                 </a>
-                    <span class="header__city" data-js="city">
-                        <span>
-                            Ваш регион <a class="header__city-link" data-js="select-city" href="javascript:void(0)">
-                                <span class="header__city-name"></span><span class="city-name-question">?</span>
+                <div class="header__city" data-js="city">
+                    <span>
+Ваш регион                                    <a class="header__city-link">
+                                Новгородская область
                                 <span class="header__city-icon">
-                                    <svg class="svg-icon" viewBox="0 0 20 20" width="1.6em" height="2em" style="width: 1.6em; height: 2em;">
-                                        <use xlink:href="/images/new-design/icons/sprite.svg#ballon"></use>
+                                    <svg class="svg-icon" viewBox="0 0 20 20" width="2rem" height="2rem" style="width: 2rem; height: 2rem;">
+                                        <use xlink:href="/images/icons/sprite.svg#ballon"></use>
                                     </svg>
                                 </span>
                             </a>
-                        </span>
-
                     </span>
+                </div>
             </div>
 
             <div class="header__toolbar">
-                <div class="header__mobile">
-                    <a class="header__control-hamburger" href="programs.html#" data-js="open-nav-modal">
-                        <svg class="svg-icon -hamburger" viewBox="0 0 24 17" width="3em" height="3em" style="width: 3em; height: 3em;">
-                            <use xlink:href="/images/new-design/icons/sprite.svg#hamburger"></use>
-                        </svg>
+               
+                <nav class="header__socials" data-js="header-socials">
+                    <a class="header__socials-link" href="https://vk.com/bkadnovgorod" target="_blank">
+                        <img src="images/9.png">
                     </a>
-                    <span data-js="close-nav-modal-wrap">
-                        <a class="nav-modal__close" href="javascript:void(0)" data-js="close-nav-modal">
-                            <svg class="svg-icon -close" viewBox="0 0 20 20" width="2em" height="2em" style="width: 2em; height: 2em;">
-                                <use xlink:href="/images/new-design/icons/sprite.svg#close"></use>
+                    <a class="header__socials-link" href="https://www.instagram.com/bkdrussia/" target="_blank">
+                        <img src="images/10.png">
+                    </a>
+                    <a class="header__socials-link" href="https://ok.ru/bkdrussia" target="_blank">
+                        <img src="images/11.png">
+                    </a>
+                    <a class="header__socials-link" href="https://twitter.com/bkdrussia" target="_blank">
+                        <img src="images/12.png">
+                    </a>
+                    <a class="header__socials-link" href="https://www.facebook.com/bkdrussia" target="_blank">
+                        <img src="images/13.png">
+                    </a>
+                    <a class="header__socials-link" href="https://t.me/s/Novgorodavtodor" target="_blank">
+                        <img src="images/14.png">
+                    </a>
+                </nav>
+                <div class="glav">
+                    <a href="javascript://" onclick="letsee_toggle_panel()" class="header__actions-eye-link">
+                        <span class="header__actions-eye-text"><a href="index.html">На главную</a></span>
+                        <span class="header__actions-eye-icon">
+                            <svg class="svg-icon" viewBox="0 0 24 24" width="2.4rem" height="2.4rem" style="width: 2.4rem; height: 2.4rem;">
+                                <use xlink:href="/images/icons/sprite.svg#eye"></use>
                             </svg>
-                        </a>
-                    </span>
+                        </span>
+                    </a>
                 </div>
-                <div class="header__socials-w-search">
-                    <div class="header__search-wrap" data-js="header-search">
-                        <div class="header__search ">
-                            <div class="header__search-container">
-                                <form action="https://novgorod.bkdrf.ru/search" method="post">
-                                    <input class="header__search-input" name="search" type="search" placeholder="&#x41F;&#x43E;&#x438;&#x441;&#x43A;" />
-                                    <button class="header__search-button" type="submit" data-js="header-search-btn">
-                                        <svg class="svg-icon" viewBox="0 0 20 20" width="1.5em" height="1.5em" style="width: 1.5em; height: 1.5em;">
-                                            <use xlink:href="/images/new-design/icons/sprite.svg#search"></use>
-                                        </svg>
-                                    </button>
-                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PEB9kw2TUJNn4s9Y8lTMh_87oRTUXcWUIApY1M7uoxCxDtevPhZGt2e6tBVDas8XnJCVbvsvUuxGxsqujooiLQNX4Lli5RjQ5ZOqoBcGFbAwIkT10AbJ6lwUBMWVb1YwWrslhXlRkR9LZDNuvc1Wzc" /></form>
-
-                            </div>
-                        </div>
-                    </div>
-                    <nav class="header__socials" data-js="header-socials">
-                        <a class="header__socials-link" href="https://vk.com/bkdnational" target="_blank" rel="noreferrer">
-                            <svg class="svg-icon" viewBox="0 0 32 32" width="3em" height="3em" style="width: 3em; height: 3em;">
-                                <use xlink:href="/images/new-design/icons/sprite.svg#social-vk"></use>
-                            </svg>
-                        </a>
-                        <a class="header__socials-link" href="https://www.instagram.com/bkdrussia/" target="_blank" rel="noreferrer">
-                            <svg class="svg-icon" viewBox="0 0 32 32" width="3em" height="3em" style="width: 3em; height: 3em;">
-                                <use xlink:href="/images/new-design/icons/sprite.svg#social-ig"></use>
-                            </svg>
-                        </a>
-                        <a class="header__socials-link" href="https://ok.ru/bkdrussia" target="_blank" rel="noreferrer">
-                            <svg class="svg-icon" viewBox="0 0 32 32" width="3em" height="3em" style="width: 3em; height: 3em;">
-                                <use xlink:href="/images/new-design/icons/sprite.svg#social-ok"></use>
-                            </svg>
-                        </a>
-                        <a class="header__socials-link" href="https://twitter.com/bkdrussia" target="_blank" rel="noreferrer">
-                            <svg class="svg-icon" viewBox="0 0 28 28" width="3em" height="3em" style="width: 3em; height: 3em;">
-                                <use xlink:href="/images/new-design/icons/sprite.svg#social-tw"></use>
-                            </svg>
-                        </a>
-                        <a class="header__socials-link" href="https://www.facebook.com/bkdrussia" target="_blank" rel="noreferrer">
-                            <svg class="svg-icon" viewBox="0 0 28 28" width="3em" height="3em" style="width: 3em; height: 3em;">
-                                <use xlink:href="/images/new-design/icons/sprite.svg#social-fb"></use>
-                            </svg>
-                        </a>
-                    </nav>
-                </div>
-
                 <div class="header__actions">
                     <div class="header__actions-eye">
                         <a href="javascript://" onclick="letsee_toggle_panel()" class="header__actions-eye-link">
                             <span class="header__actions-eye-text">Версия для слабовидящих</span>
                             <span class="header__actions-eye-icon">
-                                <svg class="svg-icon" viewBox="0 0 24 24" width="2em" height="2.2em" style="width: 2em; height: 2.2em;">
-                                    <use xlink:href="/images/new-design/icons/sprite.svg#eye"></use>
+                                <svg class="svg-icon" viewBox="0 0 24 24" width="2.4rem" height="2.4rem" style="width: 2.4rem; height: 2.4rem;">
+                                    <use xlink:href="/images/icons/sprite.svg#eye"></use>
                                 </svg>
                             </span>
                         </a>
                     </div>
 
-                                <div class="header__actions-lang">
-                                        <span><a class="header__actions-lang-link is-active">Ru</a>/<a class="regionlink header__actions-lang-link" data-subdomain="en" href="javascript:void(0)">En</a></span>
-                                </div>
 
-
-
-                    <div class="header__actions-login">
-                        <div class="lkb_top">
-                                <a class="header__actions-login-link" href="account/login.html">
-                                    <span>Войти</span>
-                                    <svg class="svg-icon" viewBox="0 0 24 24" width="2.4em" height="2.4em" style="width: 2.4em; height: 2.4em;">
-
-                                        <use xlink:href="/images/new-design/icons/sprite.svg#login"></use>
-                                    </svg>
-                                </a>
-                        </div>
+                    <div class="header__actions-lang">
+                            <span><a class="header__actions-lang-link is-active">Ru</a>/<a class="regionlink header__actions-lang-link" data-subdomain="en" href="javascript:void(0)">En</a></span>
                     </div>
+
+
+
+
+                    
                 </div>
             </div>
         </div>
@@ -354,7 +541,7 @@
 <div class="main_content_wp smi_wp">
     <div class="container">
         <h1>
-            Программы дорожных работ в рамках национального проекта "Безопасные качественные дороги"
+            <strong>Программы дорожных работ в рамках национального проекта "Безопасные качественные дороги"</strong>
         </h1>
         <div class="program_wp">
 
@@ -369,270 +556,60 @@
                     &#x41F;&#x420;&#x41E;&#x413;&#x420;&#x410;&#x41C;&#x41C;&#x42B; &#x414;&#x41E;&#x420;&#x41E;&#x416;&#x41D;&#x42B;&#x425; &#x420;&#x410;&#x411;&#x41E;&#x422;
                 </p>
                 <div class="program_place_wp flex justify-content-between">
-                    <div class="program_place_column" style="column-count:2; width:100%;">
+                    <div class="program_place_column" style="column-count:1; width:100%;">
                             <div class="pbc_block flex">
-                                <p>&#x410;</p>
+                                <p>2019 год</p>
                                 <div>
-                                        <a target="_blank" rel="noreferrer" href="http://mintrans22.ru/proekt-bezopasnye-i-kachestvennye-dorogi ">
-&#x410;&#x43B;&#x442;&#x430;&#x439;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://mintrans.amurobl.ru/pages/dorozhnoe-khozyaystvo/bezopasnye-kachestvennye-avtomobilnye-dorogi/ ">
-&#x410;&#x43C;&#x443;&#x440;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://transport29.ru/deyatelnost/bkad ">
-&#x410;&#x440;&#x445;&#x430;&#x43D;&#x433;&#x435;&#x43B;&#x44C;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://minstroy.astrobl.ru/section/programma-kompleksnogo-razvitiya-transportnoy-infrastruktury-astrahanskoy-gorodskoy ">
-&#x410;&#x441;&#x442;&#x440;&#x430;&#x445;&#x430;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
+                                        <a target="_blank" rel="noreferrer" href="home/Информация_об_итогах_работ_2019_года.pdf">
+Информация об итогах работ 2019 года                                      </a>
+                                        <a target="_blank" rel="noreferrer" href="home/celevye-pokazateli-2019-god.html">
+Целевые показатели 2019 года                                       </a>
+
                                 </div>
                             </div>
                             <div class="pbc_block flex">
-                                <p>&#x411;</p>
+                                <p>2020 год</p>
                                 <div>
-                                        <a target="_blank" rel="noreferrer" href="https://www.belgorodstroy.ru/o-departamente/nacionalnye-proekty/bezopasnye-i-kachestvennye-avtomobilnye-dorogi/ ">
-&#x411;&#x435;&#x43B;&#x433;&#x43E;&#x440;&#x43E;&#x434;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://dor32.ru/new/index_bkad_info.php ">
-&#x411;&#x440;&#x44F;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
+                                        <a target="_blank" rel="noreferrer" href="home/Информация_об_итогах_работ_2020_года.pdf">
+Информация об итогах работ 2020 года                                        </a>
+                                        <a target="_blank" rel="noreferrer" href="home/celevym-pokazateli-2020-god.-1-.html">
+Целевые показатели 2020 года                                       </a>
                                 </div>
                             </div>
                             <div class="pbc_block flex">
-                                <p>&#x412;</p>
+                                <p>2021 год</p>
                                 <div>
-                                        <a target="_blank" rel="noreferrer" href="https://dtdx.avo.ru/bezopasnye-i-kacestvennye-avtomobil-nye-dorogi ">
-&#x412;&#x43B;&#x430;&#x434;&#x438;&#x43C;&#x438;&#x440;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://uad.volgograd.ru/current-activity/bezopasnye-i-kachestvennye-avtomobilnye-dorogi">
-&#x412;&#x43E;&#x43B;&#x433;&#x43E;&#x433;&#x440;&#x430;&#x434;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://ddxt.gov35.ru/vedomstvennaya-informatsiya/info-for-citizens/bkad/">
-&#x412;&#x43E;&#x43B;&#x43E;&#x433;&#x43E;&#x434;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://www.govvrn.ru/proekt-bezopasnye-i-kacestvennye-dorogi- ">
-&#x412;&#x43E;&#x440;&#x43E;&#x43D;&#x435;&#x436;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
+                                        <a target="_blank" rel="noreferrer" href="home/Информация_об_итогах_работ_2021_года.pdf">
+Информация об итогах работ 2021 года                                        </a>
+                                        <a target="_blank" rel="noreferrer" href="home/vvod-dorog-v-2021-godu-.html">
+Целевые показатели 2021 года                                        </a>
+
                                 </div>
                             </div>
+                            
                             <div class="pbc_block flex">
-                                <p>&#x415;</p>
+                                <p>2022 год</p>
                                 <div>
-                                        <a target="_blank" rel="noreferrer" href="http://www.biradm.ru/natsproekty/bezopasnye-i-kachestvennye-avtomobilnye-dorogi/">
-&#x415;&#x432;&#x440;&#x435;&#x439;&#x441;&#x43A;&#x430;&#x44F; &#x430;&#x432;&#x442;&#x43E;&#x43D;&#x43E;&#x43C;&#x43D;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
+                                        <a target="_blank" rel="noreferrer" href="home/Информация_об_итогах_работ_2022_года.pdf">
+Информация об итогах работ 2022 года                                       </a>
+                                        <a target="_blank" rel="noreferrer" href="home/celevye-pokazateli-2022-god.html">
+Целевые показатели 2022 года                                      </a>
+                                        <a target="_blank" rel="noreferrer" href="">
+Перечень объектов работ 2022 года                                        </a>
+
+
                                 </div>
                             </div>
+                            
                             <div class="pbc_block flex">
-                                <p>&#x417;</p>
+                                <p>2023 год</p>
                                 <div>
-                                        <a target="_blank" rel="noreferrer" href="https://minstroy.75.ru/deyatel-nost/bezopasnye-i-kachestvennye-avtomobil-nye-dorogi ">
-&#x417;&#x430;&#x431;&#x430;&#x439;&#x43A;&#x430;&#x43B;&#x44C;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;                                        </a>
+                                        <a target="_blank" rel="noreferrer" href="">
+План объектов ремонта 2023 года                                        </a>
+
                                 </div>
                             </div>
-                            <div class="pbc_block flex">
-                                <p>&#x418;</p>
-                                <div>
-                                        <a target="_blank" rel="noreferrer" href="http://ddht.ivanovoobl.ru/deyatelnost/dorozhnoe-khozyaystvo-regiona/bezopasnye-i-kachestvennye-avtomobilnye-dorogi/">
-&#x418;&#x432;&#x430;&#x43D;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://irkobl.ru/sites/irkstroy/bkad/ ">
-&#x418;&#x440;&#x43A;&#x443;&#x442;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                </div>
-                            </div>
-                            <div class="pbc_block flex">
-                                <p>&#x41A;</p>
-                                <div>
-                                        <a target="_blank" rel="noreferrer" href="https://mininfra.kbr.ru/?page_id=13519 ">
-&#x41A;&#x430;&#x431;&#x430;&#x440;&#x434;&#x438;&#x43D;&#x43E;-&#x411;&#x430;&#x43B;&#x43A;&#x430;&#x440;&#x441;&#x43A;&#x430;&#x44F; &#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://infrastruktura.gov39.ru/activity/roads/infografika-bkad/ ">
-&#x41A;&#x430;&#x43B;&#x438;&#x43D;&#x438;&#x43D;&#x433;&#x440;&#x430;&#x434;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://admoblkaluga.ru/sub/road/road_mindor/bkd/?clear_cache=Y ">
-&#x41A;&#x430;&#x43B;&#x443;&#x436;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://www.kamgov.ru/mintrans/nacionalnyj-proekt-bezopasnye-i-kacestvennye-avtomobilnye-dorogi ">
-&#x41A;&#x430;&#x43C;&#x447;&#x430;&#x442;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://www.xn--h1acdfggndek3d.xn--p1ai/bkad">
-&#x41A;&#x430;&#x440;&#x430;&#x447;&#x430;&#x435;&#x432;&#x43E;-&#x427;&#x435;&#x440;&#x43A;&#x435;&#x441;&#x441;&#x43A;&#x430;&#x44F; &#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://xn--42-plcq9c.xn--p1ai/bkad/">
-&#x41A;&#x435;&#x43C;&#x435;&#x440;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C; &#x2014; &#x41A;&#x443;&#x437;&#x431;&#x430;&#x441;&#x441;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://ddht.ru/departament/bkd/ ">
-&#x41A;&#x438;&#x440;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://trans.adm44.ru/sfera/deytelnost/saferoad/">
-&#x41A;&#x43E;&#x441;&#x442;&#x440;&#x43E;&#x43C;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://mt.krasnodar.ru/napravleniya/dorozhnoe-khozyaystvo/natsionalnyy-proekt-bezopasnye-i-kachestvennye-avtomobilnye-dorogi-2019-2024-gg-/">
-&#x41A;&#x440;&#x430;&#x441;&#x43D;&#x43E;&#x434;&#x430;&#x440;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://mintrans.krskstate.ru ">
-&#x41A;&#x440;&#x430;&#x441;&#x43D;&#x43E;&#x44F;&#x440;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://gkh.kurganobl.ru/?page_id=7388">
-&#x41A;&#x443;&#x440;&#x433;&#x430;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://dorupr.rkursk.ru/ ">
-&#x41A;&#x443;&#x440;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                </div>
-                            </div>
-                            <div class="pbc_block flex">
-                                <p>&#x41B;</p>
-                                <div>
-                                        <a target="_blank" rel="noreferrer" href="http://road.lenobl.ru/ru/deiatelnost/nacionalnyj-proekt-bezopasnye-i-kachestvennye-dorogi/ ">
-&#x41B;&#x435;&#x43D;&#x438;&#x43D;&#x433;&#x440;&#x430;&#x434;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://transport-admlr.ru/bezopasnye-i-kachestvennye-avtomobilnye-dorogi-2020 ">
-&#x41B;&#x438;&#x43F;&#x435;&#x446;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                </div>
-                            </div>
-                            <div class="pbc_block flex">
-                                <p>&#x41C;</p>
-                                <div>
-                                        <a target="_blank" rel="noreferrer" href="https://mintrans.49gov.ru/activities/decree/">
-&#x41C;&#x430;&#x433;&#x430;&#x434;&#x430;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://mtdi.mosreg.ru/deyatelnost/nacionalnye-proekty/nacionalnyi-proekt-bezopasnye-i-kachestvennye-avtomobilnye-dorogi?utm_referrer=https%3A%2F%2Fmtdi.mosreg.ru%2F">
-&#x41C;&#x43E;&#x441;&#x43A;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://mintrans.gov-murman.ru/activities/Dor_fond/BKD/index.php ">
-&#x41C;&#x443;&#x440;&#x43C;&#x430;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                </div>
-                            </div>
-                            <div class="pbc_block flex">
-                                <p>&#x41D;</p>
-                                <div>
-                                        <a target="_blank" rel="noreferrer" href="http://gkh.adm-nao.ru/dorozhnaya-deyatelnost/bezopasnye-i-kachestvennye-avtomobilnye-dorogi/ ">
-&#x41D;&#x435;&#x43D;&#x435;&#x446;&#x43A;&#x438;&#x439; &#x430;&#x432;&#x442;&#x43E;&#x43D;&#x43E;&#x43C;&#x43D;&#x44B;&#x439; &#x43E;&#x43A;&#x440;&#x443;&#x433;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://mintrans.government-nnov.ru/?id=162636 ">
-&#x41D;&#x438;&#x436;&#x435;&#x433;&#x43E;&#x440;&#x43E;&#x434;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://mintrans.novreg.ru/nacional-nyy-proekt-bezopasnye-i-kachestvennye-avtomobil-nye-dorogi.html ">
-&#x41D;&#x43E;&#x432;&#x433;&#x43E;&#x440;&#x43E;&#x434;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://mintrans.nso.ru/page/2701 ">
-&#x41D;&#x43E;&#x432;&#x43E;&#x441;&#x438;&#x431;&#x438;&#x440;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                </div>
-                            </div>
-                            <div class="pbc_block flex">
-                                <p>&#x41E;</p>
-                                <div>
-                                        <a target="_blank" rel="noreferrer" href="http://mszhk.omskportal.ru/oiv/mszhk/otrasl/nac_proekt_bezop_avt_dorogi0 ">
-&#x41E;&#x43C;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://minstroyoren.orb.ru/trades/bezopasnye-i-kachestvennye-dorogi/">
-&#x41E;&#x440;&#x435;&#x43D;&#x431;&#x443;&#x440;&#x433;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://orel-region.ru/index.php?head=78&amp;part=226 ">
-&#x41E;&#x440;&#x43B;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                </div>
-                            </div>
-                            <div class="pbc_block flex">
-                                <p>&#x41F;</p>
-                                <div>
-                                        <a target="_blank" rel="noreferrer" href="http://minstroy.pnzreg.ru/natsionalnyy-proekt-bezopasnye-i-kachestvennye-avtomobilnye-dorogi/">
-&#x41F;&#x435;&#x43D;&#x437;&#x435;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://mintrans.permkrai.ru/regionalnye-proekty/prioritetnyy-proekt-bezopasnye-i-kachestvennye-dorogi-permskoy-gorodskoy-aglomeratsii/prioritetnyy-proekt-bezopasnye-i-kachestvennye-dorogi-permskoy-gorodskoy-aglomeratsii/ ">
-&#x41F;&#x435;&#x440;&#x43C;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://www.primorsky.ru/authorities/executive-agencies/departments/roads/bkad.php">
-&#x41F;&#x440;&#x438;&#x43C;&#x43E;&#x440;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://transport.pskov.ru/deyatelnost/sfera-dorozhnogo-hozyaystva/nacionalnyy-proekt-bezopasnye-i-kachestvennye-avtomobilnye-dorogi ">
-&#x41F;&#x441;&#x43A;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                </div>
-                            </div>
-                            <div class="pbc_block flex">
-                                <p>&#x420;</p>
-                                <div>
-                                        <a target="_blank" rel="noreferrer" href="http://adygheya.ru/ministers/departments/ministerstvo-stroitelstva-transporta-zhilishchno-kommunalnogo-i-dorozhnogo-khozyaystva/natsionalnye/avtodorogi.php ">
-&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x410;&#x434;&#x44B;&#x433;&#x435;&#x44F;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://minregion-ra.ru/bezopasnye-i-kachestvennye-avtomobilnye-dorogi-.php?clear_cache=Y">
-&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x410;&#x43B;&#x442;&#x430;&#x439;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://transport.bashkortostan.ru/projects/current/350/ ">
-&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x411;&#x430;&#x448;&#x43A;&#x43E;&#x440;&#x442;&#x43E;&#x441;&#x442;&#x430;&#x43D;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://egov-buryatia.ru/mintrans/ ">
-&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x411;&#x443;&#x440;&#x44F;&#x442;&#x438;&#x44F;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://mintransdag.ru/prioritetnyy-proekt-bezopasnye-i-kachestvennye-dorogi- ">
-&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x414;&#x430;&#x433;&#x435;&#x441;&#x442;&#x430;&#x43D;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://www.ingushavtodor.ru/?page_id=6197 ">
-&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x418;&#x43D;&#x433;&#x443;&#x448;&#x435;&#x442;&#x438;&#x44F;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://minstroy.kalmregion.ru/spetsialnye-proekty/proekt-bezopasnye-i-kachestvennye-avtomobilnye-dorogi/ ">
-&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x41A;&#x430;&#x43B;&#x43C;&#x44B;&#x43A;&#x438;&#x44F;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://road.gov.karelia.ru/about/2337/ ">
-&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x41A;&#x430;&#x440;&#x435;&#x43B;&#x438;&#x44F;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://arch.rkomi.ru/page/19063/ ">
-&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x41A;&#x43E;&#x43C;&#x438;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://mtrans.rk.gov.ru/ru/structure/2019_05_28_10_28_natsionalnyi_proekt_bezopasnye_i_kachestvennye_avtomobilnye_dorogi ">
-&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x41A;&#x440;&#x44B;&#x43C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://mari-el.gov.ru/minprom/avtodor/Pages/bkd.aspx">
-&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x41C;&#x430;&#x440;&#x438;&#x439; &#x42D;&#x43B;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://www.e-mordovia.ru/gosudarstvennaya-vlast-rm/ministerstva-i-vedomstva/minstroy/informatsiya-dlya-grazhdan/# ">
-&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x41C;&#x43E;&#x440;&#x434;&#x43E;&#x432;&#x438;&#x44F;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://mintrans.sakha.gov.ru/bezopasnye-i-kachestvennye-avtomobilnye-dorogi">
-&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x421;&#x430;&#x445;&#x430; (&#x42F;&#x43A;&#x443;&#x442;&#x438;&#x44F;)                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://avtodor.alania.gov.ru/pages/288 ">
-&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x421;&#x435;&#x432;&#x435;&#x440;&#x43D;&#x430;&#x44F; &#x41E;&#x441;&#x435;&#x442;&#x438;&#x44F; &#x2014; &#x410;&#x43B;&#x430;&#x43D;&#x438;&#x44F;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://mindortrans.tatarstan.ru/rus/bezopasnie-i-kachestvennie-dorogi.htm ">
-&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x422;&#x430;&#x442;&#x430;&#x440;&#x441;&#x442;&#x430;&#x43D;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://mindortrans.rtyva.ru/topic/971/">
-&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x422;&#x44B;&#x432;&#x430;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://r-19.ru/authorities/ministry-of-transport-and-roads-of-the-republic-of-khakassia/common/6598/ ">
-&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x425;&#x430;&#x43A;&#x430;&#x441;&#x438;&#x44F;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://mindortrans.donland.ru/Blog/ViewPost.aspx?pageid=51870&amp;ItemID=258423&amp;mid=45818 ">
-&#x420;&#x43E;&#x441;&#x442;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://mintrans.ryazangov.ru/documents/proekt-bezopasnye-i-kachestvennye-dorogi/ ">
-&#x420;&#x44F;&#x437;&#x430;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                </div>
-                            </div>
-                            <div class="pbc_block flex">
-                                <p>&#x421;</p>
-                                <div>
-                                        <a target="_blank" rel="noreferrer" href="https://mintrans.samregion.ru/category/programmy-i-proekty/natsionalnyj-proekt-bezopasnye-i-kachestvennye-avtomobilnye-dorogi/ ">
-&#x421;&#x430;&#x43C;&#x430;&#x440;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="programs.html">
-&#x421;&#x430;&#x43D;&#x43A;&#x442;-&#x41F;&#x435;&#x442;&#x435;&#x440;&#x431;&#x443;&#x440;&#x433;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://www.transport.saratov.gov.ru/BKAD_2019/index.php ">
-&#x421;&#x430;&#x440;&#x430;&#x442;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://mintrans.sakhalin.gov.ru/index.php?id=75&amp;no_cache=1">
-&#x421;&#x430;&#x445;&#x430;&#x43B;&#x438;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://mtrans.midural.ru/article/show/id/10009 ">
-&#x421;&#x432;&#x435;&#x440;&#x434;&#x43B;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://sev.gov.ru/city/traffic-lines/bkad/ ">
-&#x421;&#x435;&#x432;&#x430;&#x441;&#x442;&#x43E;&#x43F;&#x43E;&#x43B;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://promtransdor.admin-smolensk.ru/bezopasnye-i-kachestvennye-avtomobilnye-dorogi/ ">
-&#x421;&#x43C;&#x43E;&#x43B;&#x435;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://dorogisk.ru/dorozhnoe-khozyaystvo/natsproekt-bezopasnye-i-kachestvennye-avtomobilnye-dorogi/ ">
-&#x421;&#x442;&#x430;&#x432;&#x440;&#x43E;&#x43F;&#x43E;&#x43B;&#x44C;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;                                        </a>
-                                </div>
-                            </div>
-                            <div class="pbc_block flex">
-                                <p>&#x422;</p>
-                                <div>
-                                        <a target="_blank" rel="noreferrer" href="http://dortrans.tmbreg.ru/%E2%80%9Cproektnyj-komitet-%E2%80%9Cbezopasnye-i-kachestvennye-avtomobilnye-dorogi%E2%80%9D.html ">
-&#x422;&#x430;&#x43C;&#x431;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://xn--b1aeac5bfanco2a6g.xn--p1ai/safetyroads.html">
-&#x422;&#x432;&#x435;&#x440;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://dts.tomsk.gov.ru/bezopasnye-i-kachestvennye-avtomobilnye-dorogi-tomskoj-oblasti ">
-&#x422;&#x43E;&#x43C;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://transport.tularegion.ru/activities/bezopasnye-i-kachestvennye-dorogi/ ">
-&#x422;&#x443;&#x43B;&#x44C;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://admtyumen.ru/ogv_ru/gov/ProjectOffice/National_projects/Roads/more.htm?id=11549004@cmsArticle ">
-&#x422;&#x44E;&#x43C;&#x435;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                </div>
-                            </div>
-                            <div class="pbc_block flex">
-                                <p>&#x423;</p>
-                                <div>
-                                        <a target="_blank" rel="noreferrer" href="http://mindortrans.su/otrasli/dorozhnoe-khozyajstvo/natsproekt ">
-&#x423;&#x434;&#x43C;&#x443;&#x440;&#x442;&#x441;&#x43A;&#x430;&#x44F; &#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://transport.ulregion.ru/%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D1%8B%D0%B5-%D0%B8-%D0%BA%D0%B0%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D0%B4%D0%BE%D1%80%D0%BE%D0%B3%D0%B8-2019/ ">
-&#x423;&#x43B;&#x44C;&#x44F;&#x43D;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                </div>
-                            </div>
-                            <div class="pbc_block flex">
-                                <p>&#x425;</p>
-                                <div>
-                                        <a target="_blank" rel="noreferrer" href="https://mintrans.khabkrai.ru/Deyatelnost/Dorozhnaya-deyatelnost/1261 ">
-&#x425;&#x430;&#x431;&#x430;&#x440;&#x43E;&#x432;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://depdorhoz.admhmao.ru/natsionalnyy-proekt-bezopasnye-i-kachestvennye-avtomobilnye-dorogi-khanty-mansiyskiy-avtonomnyy-okru/ ">
-&#x425;&#x430;&#x43D;&#x442;&#x44B;-&#x41C;&#x430;&#x43D;&#x441;&#x438;&#x439;&#x441;&#x43A;&#x438;&#x439; &#x430;&#x432;&#x442;&#x43E;&#x43D;&#x43E;&#x43C;&#x43D;&#x44B;&#x439; &#x43E;&#x43A;&#x440;&#x443;&#x433;                                        </a>
-                                </div>
-                            </div>
-                            <div class="pbc_block flex">
-                                <p>&#x427;</p>
-                                <div>
-                                        <a target="_blank" rel="noreferrer" href="http://mindortrans74.ru/ ">
-&#x427;&#x435;&#x43B;&#x44F;&#x431;&#x438;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://www.minavtodor-chr.ru/bkad/ ">
-&#x427;&#x435;&#x447;&#x435;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://mintrans.cap.ru/action/activity/sobitiya/proekt-bezopasnie-i-kachestvennie-dorogi ">
-&#x427;&#x443;&#x432;&#x430;&#x448;&#x441;&#x43A;&#x430;&#x44F; &#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="http://&#x447;&#x443;&#x43A;&#x43E;&#x442;&#x43A;&#x430;.&#x440;&#x444;/natsionalnye-proekty/regionalnye-proekti/np-bezopasnye-i-kachestvennye-avtomobilnye-dorogi/ ">
-&#x427;&#x443;&#x43A;&#x43E;&#x442;&#x441;&#x43A;&#x438;&#x439; &#x430;&#x432;&#x442;&#x43E;&#x43D;&#x43E;&#x43C;&#x43D;&#x44B;&#x439; &#x43E;&#x43A;&#x440;&#x443;&#x433;                                        </a>
-                                </div>
-                            </div>
-                            <div class="pbc_block flex">
-                                <p>&#x42F;</p>
-                                <div>
-                                        <a target="_blank" rel="noreferrer" href="https://dtidh.yanao.ru/projects/130/">
-&#x42F;&#x43C;&#x430;&#x43B;&#x43E;-&#x41D;&#x435;&#x43D;&#x435;&#x446;&#x43A;&#x438;&#x439; &#x430;&#x432;&#x442;&#x43E;&#x43D;&#x43E;&#x43C;&#x43D;&#x44B;&#x439; &#x43E;&#x43A;&#x440;&#x443;&#x433;                                        </a>
-                                        <a target="_blank" rel="noreferrer" href="https://www.yarregion.ru/depts/ddh/Pages/bkad.aspx ">
-&#x42F;&#x440;&#x43E;&#x441;&#x43B;&#x430;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;                                        </a>
-                                </div>
-                            </div>
+                            
                     </div>
                 </div>
             </div>
