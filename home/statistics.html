@@ -57,6 +57,228 @@
 
     <link media="all" rel="stylesheet" type="text/css" href="../js/simpleLightBox.min.css" />
 
+
+    <style>
+
+.mob_1 {
+    font-family: "ALS Sector Regular Regular";  
+}
+
+.mob_2 {
+    font-family: "ALS Sector Regular Regular"; 
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .show_mobile .dm_link {
+    display: none;
+  }
+
+  .mob_social {
+    display: none;
+  }
+
+  .map_modal {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .modal_fraginfo {
+    right: 0px;
+    position: absolute;
+  }
+
+  .modal_historyinfo {
+    left: 30px;
+    top: 60px;
+    position: absolute;
+  }
+}
+
+.mobile_modal_wp {
+    width: 320px;
+    box-sizing: border-box;
+}
+
+    .mobile_modal_wp + .fancybox-close-small {
+        top: 3px;
+        right: 5px;
+    }
+
+#mobile_modal {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.popup1 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease 0s;
+}
+.popup1:target {
+    opacity: 1;
+    visibility: visible;
+}
+.popup1:target .popup_content {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+.popup_area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+.popup_body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 30px 10px 10px;
+    transition: all 0.8s ease 0s;
+}
+.popup_content {
+    background-color: #fff;
+    color: #000;
+    max-width: 1007px;
+    padding: 0px;
+    position: relative;
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    transform: translate(0px, -100%);
+}
+.popup_close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: rgb(172, 172, 172);
+    text-decoration: none;
+}
+.popup_title {
+    font-size: 25px;
+    padding: 30px;
+    justify-content: left;
+    margin: 0px 0px 0px 0px;
+}
+.srok {
+    font-size: 15px;
+    padding-bottom: 5px;
+    color: #e48338;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.image-slider_image :last-child {
+    margin-right: 0px;
+}
+.popup_img {
+    float: left;
+    margin-right: 7px;
+    text-align: center;
+}
+
+.popup_text {
+    align-items: center;
+    padding: 20px 0;
+}
+
+.popup_title {
+    font-weight: 700;
+}
+
+
+.leaflet-tooltip {
+	font-family: 'ALS Sector';
+	font-size: 15px;
+	line-height: 19px;
+	position: absolute;
+	padding: 6px;
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	color: #222;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+	}
+
+
+
+@media (max-width: 1100px) {
+
+.header__city {
+  display: block;
+  margin-top: 3em;
+  padding-left: 3em;
+  font-size: 1.0em;
+  line-height: 1.5em;
+  font-weight: 300;
+  letter-spacing: .04em;
+  display: flex;
+  align-items: flex-end;
+}
+
+
+
+
+.header__socials {
+  display: block;
+  margin-left: 30px;
+  margin-right: -10px;
+  margin-top: -10px;
+  width: 54px;
+}
+
+.header__socials-link {
+  height: 15px;
+}
+
+.header__socials-link img {
+  height: 15px;
+}
+
+.popup_img {
+  width: 48%;
+}
+
+.popup_content {
+  width: 100%;
+}
+
+.popup_body {
+  padding: 0 0 0 0;
+}
+.swiper-slide {
+  width: 100%;
+  margin-right: 0px;
+}
+
+
+
+}
+
+
+
+
+    </style>
     
 
     <script src="../js/jquery-1.11.3.min.js"></script>
@@ -79,6 +301,8 @@
 </head>
 
 <body>
+
+
     <div class="page_wp">
 
         <div class="mob_btn">
@@ -90,117 +314,78 @@
         </div>
 
 
+
+
 <header class="header">
     <div class="header__container container">
         <div class="header__top-line">
             <div class="header__logo-wrap">
-                <a class="header__logo" href="../index.html" data-js="logo">
+                <a class="header__logo">
                         <span class="header__logo-image"></span>
                 </a>
-                    <span class="header__city" data-js="city">
-                        <span>
-                            Ваш регион <a class="header__city-link" data-js="select-city" href="javascript:void(0)">
-                                <span class="header__city-name"></span><span class="city-name-question">?</span>
+                <div class="header__city" data-js="city">
+                    <span>
+Ваш регион                                    <a class="header__city-link">
+                                Новгородская область
                                 <span class="header__city-icon">
-                                    <svg class="svg-icon" viewBox="0 0 20 20" width="1.6em" height="2em" style="width: 1.6em; height: 2em;">
-                                        <use xlink:href="/images/new-design/icons/sprite.svg#ballon"></use>
+                                    <svg class="svg-icon" viewBox="0 0 20 20" width="2rem" height="2rem" style="width: 2rem; height: 2rem;">
+                                        <use xlink:href="/images/icons/sprite.svg#ballon"></use>
                                     </svg>
                                 </span>
                             </a>
-                        </span>
-
                     </span>
+                </div>
             </div>
 
             <div class="header__toolbar">
-                <div class="header__mobile">
-                    <a class="header__control-hamburger" href="statistics.html#" data-js="open-nav-modal">
-                        <svg class="svg-icon -hamburger" viewBox="0 0 24 17" width="3em" height="3em" style="width: 3em; height: 3em;">
-                            <use xlink:href="/images/new-design/icons/sprite.svg#hamburger"></use>
-                        </svg>
+               
+                <nav class="header__socials" data-js="header-socials">
+                    <a class="header__socials-link" href="https://vk.com/bkadnovgorod" target="_blank">
+                        <img src="../images/9.png">
                     </a>
-                    <span data-js="close-nav-modal-wrap">
-                        <a class="nav-modal__close" href="javascript:void(0)" data-js="close-nav-modal">
-                            <svg class="svg-icon -close" viewBox="0 0 20 20" width="2em" height="2em" style="width: 2em; height: 2em;">
-                                <use xlink:href="/images/new-design/icons/sprite.svg#close"></use>
+                    <a class="header__socials-link" href="https://www.instagram.com/bkdrussia/" target="_blank">
+                        <img src="../images/10.png">
+                    </a>
+                    <a class="header__socials-link" href="https://ok.ru/bkdrussia" target="_blank">
+                        <img src="../images/11.png">
+                    </a>
+                    <a class="header__socials-link" href="https://twitter.com/bkdrussia" target="_blank">
+                        <img src="../images/12.png">
+                    </a>
+                    <a class="header__socials-link" href="https://www.facebook.com/bkdrussia" target="_blank">
+                        <img src="../images/13.png">
+                    </a>
+                    <a class="header__socials-link" href="https://t.me/s/Novgorodavtodor" target="_blank">
+                        <img src="../images/14.png">
+                    </a>
+                </nav>
+                <div class="glav">
+                    <a href="javascript://" onclick="letsee_toggle_panel()" class="header__actions-eye-link">
+                        <span class="header__actions-eye-text"><a href="../index.html">На главную</a></span>
+                        <span class="header__actions-eye-icon">
+                            <svg class="svg-icon" viewBox="0 0 24 24" width="2.4rem" height="2.4rem" style="width: 2.4rem; height: 2.4rem;">
+                                <use xlink:href="/images/icons/sprite.svg#eye"></use>
                             </svg>
-                        </a>
-                    </span>
+                        </span>
+                    </a>
                 </div>
-                <div class="header__socials-w-search">
-                    <div class="header__search-wrap" data-js="header-search">
-                        <div class="header__search ">
-                            <div class="header__search-container">
-                                <form action="https://novgorod.bkdrf.ru/search" method="post">
-                                    <input class="header__search-input" name="search" type="search" placeholder="&#x41F;&#x43E;&#x438;&#x441;&#x43A;" />
-                                    <button class="header__search-button" type="submit" data-js="header-search-btn">
-                                        <svg class="svg-icon" viewBox="0 0 20 20" width="1.5em" height="1.5em" style="width: 1.5em; height: 1.5em;">
-                                            <use xlink:href="/images/new-design/icons/sprite.svg#search"></use>
-                                        </svg>
-                                    </button>
-                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PEB9kw2TUJNn4s9Y8lTMh-TARUnfWUBahlk3lDZyjCa_Jiv-Cfmpsn417ALqpUN4MyQdnw7QOq9lEVGI11dS-mqVVf8YWx2S6r2Vpl89Ee3548X9YyTJagx3ZoeThRTlXMvWodfguzfjdfBMZQLG1I" /></form>
-
-                            </div>
-                        </div>
-                    </div>
-                    <nav class="header__socials" data-js="header-socials">
-                        <a class="header__socials-link" href="https://vk.com/bkdnational" target="_blank" rel="noreferrer">
-                            <svg class="svg-icon" viewBox="0 0 32 32" width="3em" height="3em" style="width: 3em; height: 3em;">
-                                <use xlink:href="/images/new-design/icons/sprite.svg#social-vk"></use>
-                            </svg>
-                        </a>
-                        <a class="header__socials-link" href="https://www.instagram.com/bkdrussia/" target="_blank" rel="noreferrer">
-                            <svg class="svg-icon" viewBox="0 0 32 32" width="3em" height="3em" style="width: 3em; height: 3em;">
-                                <use xlink:href="/images/new-design/icons/sprite.svg#social-ig"></use>
-                            </svg>
-                        </a>
-                        <a class="header__socials-link" href="https://ok.ru/bkdrussia" target="_blank" rel="noreferrer">
-                            <svg class="svg-icon" viewBox="0 0 32 32" width="3em" height="3em" style="width: 3em; height: 3em;">
-                                <use xlink:href="/images/new-design/icons/sprite.svg#social-ok"></use>
-                            </svg>
-                        </a>
-                        <a class="header__socials-link" href="https://twitter.com/bkdrussia" target="_blank" rel="noreferrer">
-                            <svg class="svg-icon" viewBox="0 0 28 28" width="3em" height="3em" style="width: 3em; height: 3em;">
-                                <use xlink:href="/images/new-design/icons/sprite.svg#social-tw"></use>
-                            </svg>
-                        </a>
-                        <a class="header__socials-link" href="https://www.facebook.com/bkdrussia" target="_blank" rel="noreferrer">
-                            <svg class="svg-icon" viewBox="0 0 28 28" width="3em" height="3em" style="width: 3em; height: 3em;">
-                                <use xlink:href="/images/new-design/icons/sprite.svg#social-fb"></use>
-                            </svg>
-                        </a>
-                    </nav>
-                </div>
-
                 <div class="header__actions">
                     <div class="header__actions-eye">
                         <a href="javascript://" onclick="letsee_toggle_panel()" class="header__actions-eye-link">
                             <span class="header__actions-eye-text">Версия для слабовидящих</span>
                             <span class="header__actions-eye-icon">
-                                <svg class="svg-icon" viewBox="0 0 24 24" width="2em" height="2.2em" style="width: 2em; height: 2.2em;">
-                                    <use xlink:href="/images/new-design/icons/sprite.svg#eye"></use>
+                                <svg class="svg-icon" viewBox="0 0 24 24" width="2.4rem" height="2.4rem" style="width: 2.4rem; height: 2.4rem;">
+                                    <use xlink:href="/images/icons/sprite.svg#eye"></use>
                                 </svg>
                             </span>
                         </a>
                     </div>
 
-                                <div class="header__actions-lang">
-                                        <span><a class="header__actions-lang-link is-active">Ru</a>/<a class="regionlink header__actions-lang-link" data-subdomain="en" href="javascript:void(0)">En</a></span>
-                                </div>
 
-
-
-                    <div class="header__actions-login">
-                        <div class="lkb_top">
-                                <a class="header__actions-login-link" href="../account/login.html">
-                                    <span>Войти</span>
-                                    <svg class="svg-icon" viewBox="0 0 24 24" width="2.4em" height="2.4em" style="width: 2.4em; height: 2.4em;">
-
-                                        <use xlink:href="/images/new-design/icons/sprite.svg#login"></use>
-                                    </svg>
-                                </a>
-                        </div>
+                    <div class="header__actions-lang">
+                            <span><a class="header__actions-lang-link is-active">Ru</a>/<a class="regionlink header__actions-lang-link" data-subdomain="en" href="javascript:void(0)">En</a></span>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -353,7 +538,7 @@
 <div class="main_content_wp lk_wpp">
     <div class="container">
         <div class="news_top flex justify-content-between align-items-end">
-            <h1>Динамика показателей</h1>
+            <h1><strong>Динамика показателей</strong></h1>
         </div>
         <div class="row diagramm_wp">
 
@@ -362,10 +547,10 @@
             </div>
 
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div data-color="#629bd5" data-goal="8" data-value="4" class="circle_wp">
+                <div data-color="#629bd5" data-goal="50.9" data-value="42.2" class="circle_wp">
                     <div class="circle_head flex align-items-start justify-content-center">
                         <p>
-                            <span style="color: #629bd5">1. </span>Доля автомобильных дорог регионального значения, соответствующих нормативным требованиям (с учетом Москвы и Санкт-Петербурга)
+                            <span style="color: #629bd5">1. </span>Доля автомобильных дорог регионального и межмуниципального значения, соответствующих нормативным требованиям (в Новгородской области)
                         </p>
                     </div>
                     <div class="circle_legend_text flex">
@@ -375,7 +560,7 @@
                         </div>
                         <div class="clt_block">
                             <p class="clt_top">конец 2017</p>
-                            <p style="color: #629bd5" class="clt_middle">43.1 %</p>
+                            <p style="color: #629bd5" class="clt_middle">26,5 %</p>
                         </div>
                     </div>
                     <div class="circle_bg flex align-items-center justify-content-center">
@@ -383,7 +568,7 @@
                         <div class="circle_current flex align-items-center justify-content-center">
                             <div class="flex align-items-center justify-content-center">
                                 <p style="color: #629bd5">
-                                    46,8 %<br /><span style="font-size:12px;">(конец 2022)</span>
+                                    42,2 %<br /><span style="font-size:12px;">(конец 2022)</span>
                                 </p>
                             </div>
                         </div>
@@ -393,10 +578,10 @@
             </div>
 
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div data-color="#629bd5" data-goal="8" data-value="4" class="circle_wp">
+                <div data-color="#629bd5" data-goal="85" data-value="74" class="circle_wp">
                     <div class="circle_head flex align-items-start justify-content-center">
                         <p>
-                            <span style="color: #629bd5">2. </span>Доля дорожной сети городских агломераций, находящихся в нормативном состоянии
+                            <span style="color: #629bd5">2. </span>Доля дорожной сети Новгородской городской агломерации, находящихся в нормативном состоянии
                         </p>
                     </div>
                     <div class="circle_legend_text flex">
@@ -414,7 +599,7 @@
                         <div class="circle_current flex align-items-center justify-content-center">
                             <div class="flex align-items-center justify-content-center">
                                 <p style="color: #629bd5">
-                                    77 %<br /><span style="font-size:12px;">(конец 2022)</span>
+                                    74 %<br /><span style="font-size:12px;">(конец 2022)</span>
                                 </p>
                             </div>
                         </div>
@@ -424,20 +609,20 @@
             </div>
 
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div data-color="#629bd5" data-goal="8" data-value="4" class="circle_wp">
+                <div data-color="#629bd5" data-goal="70" data-value="57" class="circle_wp">
                     <div class="circle_head flex align-items-start justify-content-center">
                         <p>
-                            <span style="color: #629bd5">3. </span>Удовлетворенность качеством и доступностью автомобильных дорог (показатель общественно значимого результата)
+                            <span style="color: #629bd5">3. </span>Удовлетворенность качеством и доступностью автомобильных дорог Новгородской области (показатель общественно значимого результата)
                         </p>
                     </div>
                     <div class="circle_legend_text flex">
                         <div class="clt_block">
                             <p class="clt_top">конец 2024</p>
-                            <p style="color: #629bd5" class="clt_middle">50 %</p>
+                            <p style="color: #629bd5" class="clt_middle">70 %</p>
                         </div>
                         <div class="clt_block">
-                            <p class="clt_top">конец 2019</p>
-                            <p style="color: #629bd5" class="clt_middle">41 %</p>
+                            <p class="clt_top">конец 2017</p>
+                            <p style="color: #629bd5" class="clt_middle">24 %</p>
                         </div>
                     </div>
                     <div class="circle_bg flex align-items-center justify-content-center">
@@ -445,7 +630,7 @@
                         <div class="circle_current flex align-items-center justify-content-center">
                             <div class="flex align-items-center justify-content-center">
                                 <p style="color: #629bd5">
-                                    43 % <br /><span style="font-size:12px;">(конец 2022)</span>
+                                    57 % <br /><span style="font-size:12px;">(конец 2022)</span>
                                 </p>
                             </div>
                         </div>
@@ -455,16 +640,16 @@
             </div>
 
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div data-color="#5c4166" data-goal="8" data-value="4" class="circle_wp">
+                <div data-color="#5c4166" data-goal="80" data-value="53" class="circle_wp">
                     <div class="circle_head flex align-items-start justify-content-center">
                         <p>
-                            <span style="color: #5c4166">4. </span>Доля государственных контрактов на осуществление дорожной деятельности в рамках нацпроекта, предусматривающих использование новых технологий и материалов, включенных в реестр новых и наилучших технологий, материалов и технологических решений повторного применения
+                            <span style="color: #5c4166">4. </span>Доля государственных контрактов на осуществление дорожной деятельности в рамках нацпроекта, предусматривающих использование новых технологий и материалов, включенных в реестр новых и наилучших технологий, материалов и технологических решений повторного применения в Новгородской области
                         </p>
                     </div>
                     <div class="circle_legend_text flex">
                         <div class="clt_block">
                             <p class="clt_top">конец 2024</p>
-                            <p style="color: #5c4166" class="clt_middle">40 %<br />&nbsp;</p>
+                            <p style="color: #5c4166" class="clt_middle">80 %<br />&nbsp;</p>
                         </div>
                         <div class="clt_block">
                             <p class="clt_top">конец 2017</p>
@@ -476,7 +661,7 @@
                         <div class="circle_current flex align-items-center justify-content-center">
                             <div class="flex align-items-center justify-content-center">
                                 <p style="color: #5c4166">
-                                    20 % <br /><span style="font-size:12px;">(конец 2022)</span>
+                                    53 % <br /><span style="font-size:12px;">(конец 2022)</span>
                                 </p>
                             </div>
                         </div>
@@ -486,16 +671,16 @@
             </div>
 
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div data-color="#5c4166" data-goal="8" data-value="4" class="circle_wp">
+                <div data-color="#5c4166" data-goal="70" data-value="50" class="circle_wp">
                     <div class="circle_head flex align-items-start justify-content-center">
                         <p>
-                            <span style="color: #5c4166">5. </span>Доля государственных контрактов на осуществление дорожной деятельности в рамках нацпроекта, предусматривающих выполнение работ на принципах контракта жизненного цикла с включением в один контракт различных видов дорожных работ
+                            <span style="color: #5c4166">5. </span>Доля государственных контрактов на осуществление дорожной деятельности в рамках нацпроекта, предусматривающих выполнение работ на принципах контракта жизненного цикла с включением в один контракт различных видов дорожных работ в Новгородской области
                         </p>
                     </div>
                     <div class="circle_legend_text flex">
                         <div class="clt_block">
                             <p class="clt_top">конец 2024</p>
-                            <p style="color: #5c4166" class="clt_middle">25 %<br />&nbsp;</p>
+                            <p style="color: #5c4166" class="clt_middle">70 %<br />&nbsp;</p>
                         </div>
                         <div class="clt_block">
                             <p class="clt_top">конец 2017</p>
@@ -507,7 +692,7 @@
                         <div class="circle_current flex align-items-center justify-content-center">
                             <div class="flex align-items-center justify-content-center">
                                 <p style="color: #5c4166">
-                                    15 % <br /><span style="font-size:12px;">(конец 2022)</span>
+                                    50 % <br /><span style="font-size:12px;">(конец 2022)</span>
                                 </p>
                             </div>
                         </div>
@@ -517,20 +702,20 @@
             </div>
 
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div data-color="#cb4f5b" data-goal="8" data-value="4" class="circle_wp">
+                <div data-color="#cb4f5b" data-goal="2.9" data-value="1.7" class="circle_wp">
                     <div class="circle_head flex align-items-start justify-content-center">
                         <p>
-                            <span style="color: #5c4166">6. </span>Снижение смертности в результате дорожно-транспортных происшествий (количество погибших на 100 тыс. населения)
+                            <span style="color: #5c4166">6. </span>Снижение смертности в результате дорожно-транспортных происшествий в Новгородской области (количество погибших на 100 тыс. населения)
                         </p>
                     </div>
                     <div class="circle_legend_text flex">
                         <div class="clt_block">
                             <p class="clt_top">конец 2024</p>
-                            <p style="color: #cb4f5b" class="clt_middle">< 8,4<br />&nbsp;</p>
+                            <p style="color: #cb4f5b" class="clt_middle">< 12,3<br />&nbsp;</p>
                         </div>
                         <div class="clt_block">
                             <p class="clt_top">конец 2017</p>
-                            <p style="color: #cb4f5b" class="clt_middle">13,0<br />&nbsp;</p>
+                            <p style="color: #cb4f5b" class="clt_middle">15,2<br />&nbsp;</p>
                         </div>
                     </div>
                     <div class="circle_bg flex align-items-center justify-content-center">
@@ -538,7 +723,7 @@
                         <div class="circle_current flex align-items-center justify-content-center">
                             <div class="flex align-items-center justify-content-center">
                                 <p style="color: #cb4f5b">
-                                    9,59 % <br /><span style="font-size:12px;">(конец 2022)</span>
+                                    13,5 <br /><span style="font-size:12px;">(конец 2022)</span>
                                 </p>
                             </div>
                         </div>
@@ -548,7 +733,7 @@
             </div>
 
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div data-color="#34684d" data-goal="8" data-value="4" class="circle_wp">
+                <div data-color="#34684d" data-goal="18" data-value="9" class="circle_wp">
                     <div class="circle_head flex align-items-start justify-content-center">
                         <p>
                             <span style="color: #34684d">7. </span>Доля автомобильных дорог Минобороны России, соответствующих нормативным требованиям
@@ -579,7 +764,7 @@
             </div>
 
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div data-color="#DDC339" data-goal="8" data-value="4" class="circle_wp">
+                <div data-color="#DDC339" data-goal="9" data-value="3" class="circle_wp">
                     <div class="circle_head flex align-items-start justify-content-center">
                         <p>
                             <span style="color: #DDC339">8. </span>Доля транспортных средств в городских агломерациях (автобусы, трамваи, троллейбусы, пригородный железнодорожный подвижной состав), обновленных в рамках федерального проекта и имеющих срок эксплуатации не старше нормативного
@@ -610,20 +795,20 @@
             </div>
 
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div data-color="#DC7C37" data-goal="8" data-value="4" class="circle_wp">
+                <div data-color="#DC7C37" data-goal="33" data-value="12" class="circle_wp">
                     <div class="circle_head flex align-items-start justify-content-center">
                         <p>
-                            <span style="color: #DC7C37">9. </span>Протяженность построенных и реконструированных Росавтодором федеральных автомобильных дорог, км
+                            <span style="color: #DC7C37">9. </span>Доля федеральных автомобильных дорог, находящихся в нормативном состоянии в Новгородской области (М-10, Р-56, А-122), %
                         </p>
                     </div>
                     <div class="circle_legend_text flex">
                         <div class="clt_block">
                             <p class="clt_top">конец 2024</p>
-                            <p style="color: #DC7C37" class="clt_middle">859,2<br />&nbsp;</p>
+                            <p style="color: #DC7C37" class="clt_middle">85%<br />&nbsp;</p>
                         </div>
                         <div class="clt_block">
                             <p class="clt_top">конец 2020</p>
-                            <p style="color: #DC7C37" class="clt_middle">0<br />&nbsp;</p>
+                            <p style="color: #DC7C37" class="clt_middle">52%<br />&nbsp;</p>
                         </div>
                     </div>
                     <div class="circle_bg flex align-items-center justify-content-center">
@@ -631,7 +816,7 @@
                         <div class="circle_current flex align-items-center justify-content-center">
                             <div class="flex align-items-center justify-content-center">
                                 <p style="color: #DC7C37">
-                                    231,7<br /><span style="font-size:12px;">(конец 2022)</span>
+                                    64%<br /><span style="font-size:12px;">(конец 2022)</span>
                                 </p>
                             </div>
                         </div>
@@ -641,7 +826,7 @@
             </div>
 
             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div data-color="#DC7C37" data-goal="8" data-value="4" class="circle_wp">
+                <div data-color="#DC7C37" data-goal="85.2" data-value="85.2" class="circle_wp">
                     <div class="circle_head flex align-items-start justify-content-center">
                         <p>
                             <span style="color: #DC7C37">10. </span>Протяженность построенных и реконструированных ГК «Автодор» федеральных автомобильных дорог, км
@@ -731,7 +916,7 @@
             </div>
 
             <div class="col-12" style="text-align:center; padding-top:72px;">
-                <p style="font-size:24px; color:black;">Ход реализации мероприятий в рамках нацпроекта в 2022 году</p>
+                <p style="font-size:24px; color:black;">Целевые показатели национального проекта в Новгородской области по годам</p>
             </div>
 
 
@@ -739,27 +924,11 @@
                 <div data-color="#629bd5" data-goal="4731" data-value="3698" class="circle_wp center_legend_right">
                     <div class="circle_head flex align-items-start justify-content-center">
                         <p>
-                            <span style="color: #629bd5">1. </span>Количество законтрактованных объектов 2022 года
+                            <span style="color: #629bd5">1. </span>2019 год (32 региональных и межмуниципальных объекта введены в эксплуатацию - 361,5 км, 68 объектов в городской агломерации - 37,7 км)
                         </p>
+                        <a href="celevye-pokazateli-2019-god.html"><strong><span style="color: #DC7C37">СМОТРЕТЬ ДОКУМЕНТ</span></strong></a>
                     </div>
-                    <div class="circle_legend_text flex">
-                        <div class="clt_block">
-                            <p class="clt_top">всего</p>
-                            <p style="color: #629bd5" class="clt_middle">4731 <span>&#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;</span></p>
-                        </div>
-                    </div>
-                    <div class="circle_bg flex align-items-center justify-content-center">
-                        <div class="circle_legend"></div>
-                        <div class="circle_current flex align-items-center justify-content-center">
-                            <div class="flex align-items-center justify-content-center">
-                                <p style="color: #629bd5">
-                                    78,17 %<br /><br />3698 <br /><span>&#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x43E;&#x432;</span>
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="circle_progress"></div>
-                    </div>
+                    
                 </div>
             </div>
 
@@ -767,26 +936,11 @@
                 <div data-color="#629bd5" data-goal="79,12" data-value="1.74" class="circle_wp center_legend_right">
                     <div class="circle_head flex align-items-start justify-content-center">
                         <p>
-                            <span style="color: #629bd5">2. </span>Укладка верхнего слоя дорожного покрытия на объектах 2022 года
+                            <span style="color: #629bd5">2. </span>2020 год (28 региональных и межмуниципальных объектов - 503,4 км; 45 объектов в городской агломерации - 35,8 км)
                         </p>
+                        <a href="celevym-pokazateli-2020-god.-1-.html"><strong><span style="color: #DC7C37">СМОТРЕТЬ ДОКУМЕНТ</span></strong></a>
                     </div>
-                    <div class="circle_legend_text flex">
-                        <div class="clt_block">
-                            <p class="clt_top">всего</p>
-                            <p style="color: #629bd5" class="clt_middle">79,12 <span>млн м<sup>2</sup></span></p>
-                        </div>
-                    </div>
-                    <div class="circle_bg flex align-items-center justify-content-center">
-                        <div class="circle_legend"></div>
-                        <div class="circle_current flex align-items-center justify-content-center">
-                            <div class="flex align-items-center justify-content-center">
-                                <p style="color: #629bd5">
-                                    2,2 %<br /><br />1,74 <br /><span>млн м<sup>2</sup></span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="circle_progress"></div>
-                    </div>
+                    
                 </div>
             </div>
 
@@ -795,46 +949,20 @@
                 <div data-color="#629bd5" data-goal="110,34" data-value="2.33" class="circle_wp center_legend_right">
                     <div class="circle_head flex align-items-start justify-content-center">
                         <p>
-                            <span style="color: #629bd5">3. </span>Освоение ИМБТ (федеральный проект «Региональная и местная дорожная сеть»)
+                            <span style="color: #629bd5">3. </span>2021 год (63 региональных и мужмуниципальных объекта - 484,4 км; 31 объект в городской агломерации - 19 км)
                         </p>
+                        <a href="vvod-dorog-v-2021-godu-.html"><strong><span style="color: #DC7C37">СМОТРЕТЬ ДОКУМЕНТ</span></strong></a>
                     </div>
-                    <div class="circle_legend_text flex">
-                        <div class="clt_block">
-                            <p class="clt_top">всего</p>
-                            <p style="color: #629bd5" class="clt_middle">110,34 <span>млрд руб.</span></p>
-                        </div>
-                    </div>
-                    <div class="circle_bg flex align-items-center justify-content-center">
-                        <div class="circle_legend"></div>
-                        <div class="circle_current flex align-items-center justify-content-center">
-                            <div class="flex align-items-center justify-content-center">
-                                <p style="color: #629bd5">
-                                    2,11 %<br /><br />2,33 <span>млрд руб.</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="circle_progress"></div>
-                    </div>
+                
                 </div>
             </div>
 
             <div class="circle_legend_text flex" style="width:100%;">
                 <div class="clt_block" style="width:100%;">
-                    <p class="clt_top" style="font-size:14px;">* Количество объектов указано без справочных и переходящих объектов; общее количество объектов в 2022 году - 4709.</p>
+                    <p class="clt_top" style="font-size:14px;">* Количество введённых объектов указано без справочных и переходящих объектов; общее количество объектов в 2019-2021 годах - 197.</p>
                 </div>
             </div>
-
-
-
-
-
         </div>
-    </div>
-</div>
-
-
-
-
 <footer class="footer">
     <div class="footer__container container">
         <div class="footer__body">
@@ -852,17 +980,17 @@
             <div class="footer__partners">
                 <div class="footer__partners-list">
                         <div class="footer__partners-item">
-                            <a href="https://www.mintrans.ru/" target="_blank" class="footer__partners-link">
+                            <a href="https://mintrans.novreg.ru/" target="_blank" class="footer__partners-link">
                                 <img src="../images/new-design/footer/gerb1.png@v=LtL0zz-LxRHxuFqBLIp49x1TiK3c0xn2wYoVSFrUP-E" alt="mintrans" />
                             </a>
                         </div>
                         <div class="footer__partners-item">
-                            <a href="http://информавтодор.рф/" target="_blank" class="footer__partners-link">
+                            <a href="http://novgorodavtodor.ru/" target="_blank" class="footer__partners-link">
                                 <img src="../images/new-design/footer/gerb2.png@v=4VCz4krOuiwNesdLrahYPy7RdXSpp2IFvqAPoYN1m8g" alt="inform-grey" />
                             </a>
                         </div>
                         <div class="footer__partners-item">
-                            <a href="http://www.rosdornii.ru/" target="_blank" class="footer__partners-link">
+                            <a href="https://vk.com/bkadnovgorod" target="_blank" class="footer__partners-link">
                                 <img src="../images/new-design/footer/gerb3.png@v=ClplrQinIAU-aNAAnywhHKQTqGmMA94jFkM6oJQGxaM" alt="rosdornii-colour" alt="" />
                             </a>
                         </div>
@@ -893,363 +1021,7 @@
             </svg>
         </button>
     </div>
-    <div class="header__city-popup-favorites city-favorites">
-        <a class="city-favorites__link regionlink" data-region="all" href="../index.html" data-subdomain="">Российская Федерация</a>
-    </div>
-    <div class="header__city-popup-wrapper">
-        <div class="header__city-popup-list city-list">
-            <div class="header__city-popup-grid">
-    <div class="city-list__group">
-        <div class="city-list__group-letter">А</div>
-        <ul>
-            <li>
-                <a href="../index.html@region=P%2510P%3BQ%2502P0P9Q%2501P%253AP8P9%2520P%253AQ.html" class="regionlink" data-region="Алтайский край" data-subdomain="barnaul">Алтайский край</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2510P%253CQ%2503Q.html" class="regionlink" data-region="Амурская область" data-subdomain="amur">Амурская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2510Q.html" class="regionlink" data-region="Архангельская область" data-subdomain="arh">Архангельская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2510Q%2501Q%2502Q.html" class="regionlink" data-region="Астраханская область" data-subdomain="astrakhan">Астраханская область</a>
-            </li>
-        </ul>
-    </div>
-    <div class="city-list__group">
-        <div class="city-list__group-letter">Б</div>
-        <ul>
-            <li>
-                <a href="../index.html@region=P%2511P5P%3BP3P%253EQ.html" class="regionlink" data-region="Белгородская область" data-subdomain="belgorod">Белгородская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2511Q.html" class="regionlink" data-region="Брянская область" data-subdomain="bryansk">Брянская область</a>
-            </li>
-        </ul>
-    </div>
-    <div class="city-list__group">
-        <div class="city-list__group-letter">В</div>
-        <ul>
-            <li>
-                <a href="../index.html@region=P%2512P%3BP0P4P8P%253CP8Q.html" class="regionlink" data-region="Владимирская область" data-subdomain="vladimir">Владимирская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2512P%253EP%3BP3P%253EP3Q.html" class="regionlink" data-region="Волгоградская область" data-subdomain="volgograd">Волгоградская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2512P%253EP%3BP%253EP3P%253EP4Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html" class="regionlink" data-region="Вологодская область" data-subdomain="vologda">Вологодская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2512P%253EQ.html" class="regionlink" data-region="Воронежская область" data-subdomain="voronezh">Воронежская область</a>
-            </li>
-        </ul>
-    </div>
-    <div class="city-list__group">
-        <div class="city-list__group-letter">Е</div>
-        <ul>
-            <li>
-                <a href="../index.html@region=P%2515P2Q.html" class="regionlink" data-region="Еврейская автономная область" data-subdomain="eao">Еврейская автономная область</a>
-            </li>
-        </ul>
-    </div>
-    <div class="city-list__group">
-        <div class="city-list__group-letter">З</div>
-        <ul>
-            <li>
-                <a href="../index.html@region=P%2517P0P1P0P9P%253AP0P%3BQ%250CQ%2501P%253AP8P9%2520P%253AQ.html" class="regionlink" data-region="Забайкальский край" data-subdomain="chita">Забайкальский край</a>
-            </li>
-        </ul>
-    </div>
-    <div class="city-list__group">
-        <div class="city-list__group-letter">И</div>
-        <ul>
-            <li>
-                <a href="../index.html@region=P%2518P2P0P=P%253EP2Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html" class="regionlink" data-region="Ивановская область" data-subdomain="ivanovo">Ивановская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2518Q.html" class="regionlink" data-region="Иркутская область" data-subdomain="irkutsk">Иркутская область</a>
-            </li>
-        </ul>
-    </div>
-    <div class="city-list__group">
-        <div class="city-list__group-letter">К</div>
-        <ul>
-            <li>
-                <a href="../index.html@region=P%251AP0P1P0Q.html" class="regionlink" data-region="Кабардино-Балкарская Республика" data-subdomain="kbr">Кабардино-Балкарская Республика</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251AP0P%3BP8P=P8P=P3Q.html" class="regionlink" data-region="Калининградская область" data-subdomain="kaliningrad">Калининградская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251AP0P%3BQ%2503P6Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html" class="regionlink" data-region="Калужская область" data-subdomain="kaluga">Калужская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251AP0P%253CQ%2507P0Q%2502Q%2501P%253AP8P9%2520P%253AQ.html" class="regionlink" data-region="Камчатский край" data-subdomain="kamchatka">Камчатский край</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251AP0Q.html" class="regionlink" data-region="Карачаево-Черкесская Республика" data-subdomain="krchr">Карачаево-Черкесская Республика</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251AP5P%253CP5Q.html" class="regionlink" data-region="Кемеровская область" data-subdomain="kuzbass">Кемеровская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251AP8Q.html" class="regionlink" data-region="Кировская область" data-subdomain="kirov">Кировская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251AP%253EQ%2501Q%2502Q.html" class="regionlink" data-region="Костромская область" data-subdomain="kostroma">Костромская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251AQ.html" class="regionlink" data-region="Краснодарский край" data-subdomain="krsnd">Краснодарский край</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251AQ.html" class="regionlink" data-region="Красноярский край" data-subdomain="kras">Красноярский край</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251AQ%2503Q.html" class="regionlink" data-region="Курганская область" data-subdomain="kurgan">Курганская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251AQ%2503Q.html" class="regionlink" data-region="Курская область" data-subdomain="kursk">Курская область</a>
-            </li>
-        </ul>
-    </div>
-    <div class="city-list__group">
-        <div class="city-list__group-letter">Л</div>
-        <ul>
-            <li>
-                <a href="../index.html@region=P%251BP5P=P8P=P3Q.html" class="regionlink" data-region="Ленинградская область" data-subdomain="leninsk">Ленинградская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251BP8P%25BFP5Q%2506P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html" class="regionlink" data-region="Липецкая область" data-subdomain="lipetsk">Липецкая область</a>
-            </li>
-        </ul>
-    </div>
-    <div class="city-list__group">
-        <div class="city-list__group-letter">М</div>
-        <ul>
-            <li>
-                <a href="../index.html@region=P%251CP0P3P0P4P0P=Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html" class="regionlink" data-region="Магаданская область" data-subdomain="magadan">Магаданская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251CP%253EQ%2501P%253AP%253EP2Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html" class="regionlink" data-region="Московская область" data-subdomain="msk">Московская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251CQ%2503Q.html" class="regionlink" data-region="Мурманская область" data-subdomain="murmansk">Мурманская область</a>
-            </li>
-        </ul>
-    </div>
-    <div class="city-list__group">
-        <div class="city-list__group-letter">Н</div>
-        <ul>
-            <li>
-                <a href="../index.html@region=P%251DP5P=P5Q%2506P%253AP8P9%2520P0P2Q%2502P%253EP=P%253EP%253CP=Q%250BP9%2520P%253EP%253AQ.html" class="regionlink" data-region="Ненецкий автономный округ" data-subdomain="nao">Ненецкий автономный округ</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251DP8P6P5P3P%253EQ.html" class="regionlink" data-region="Нижегородская область" data-subdomain="nnov">Нижегородская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251DP%253EP2P3P%253EQ.html" class="regionlink" data-region="Новгородская область" data-subdomain="novgorod">Новгородская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251DP%253EP2P%253EQ%2501P8P1P8Q.html" class="regionlink" data-region="Новосибирская область" data-subdomain="novosibirsk">Новосибирская область</a>
-            </li>
-        </ul>
-    </div>
-    <div class="city-list__group">
-        <div class="city-list__group-letter">О</div>
-        <ul>
-            <li>
-                <a href="../index.html@region=P%251EP%253CQ%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html" class="regionlink" data-region="Омская область" data-subdomain="omsk">Омская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251EQ.html" class="regionlink" data-region="Оренбургская область" data-subdomain="orenburg">Оренбургская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251EQ.html" class="regionlink" data-region="Орловская область" data-subdomain="orel">Орловская область</a>
-            </li>
-        </ul>
-    </div>
-    <div class="city-list__group">
-        <div class="city-list__group-letter">П</div>
-        <ul>
-            <li>
-                <a href="../index.html@region=P%251FP5P=P7P5P=Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html" class="regionlink" data-region="Пензенская область" data-subdomain="penza">Пензенская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251FP5Q.html" class="regionlink" data-region="Пермский край" data-subdomain="perm">Пермский край</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251FQ.html" class="regionlink" data-region="Приморский край" data-subdomain="vladivostok">Приморский край</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%251FQ%2501P%253AP%253EP2Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html" class="regionlink" data-region="Псковская область" data-subdomain="pskov">Псковская область</a>
-            </li>
-        </ul>
-    </div>
-    <div class="city-list__group">
-        <div class="city-list__group-letter">Р</div>
-        <ul>
-            <li>
-                <a href="../index.html@region=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%2510P4Q%250BP3P5Q%250F.html" class="regionlink" data-region="Республика Адыгея" data-subdomain="adygea">Республика Адыгея</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%2510P%3BQ%2502P0P9.html" class="regionlink" data-region="Республика Алтай" data-subdomain="altai">Республика Алтай</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%2511P0Q%2508P%253AP%253EQ.html" class="regionlink" data-region="Республика Башкортостан" data-subdomain="bashkortostan">Республика Башкортостан</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%2511Q%2503Q.html" class="regionlink" data-region="Республика Бурятия" data-subdomain="buryatia">Республика Бурятия</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%2514P0P3P5Q%2501Q%2502P0P=.html" class="regionlink" data-region="Республика Дагестан" data-subdomain="dagestan">Республика Дагестан</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%2518P=P3Q%2503Q%2508P5Q%2502P8Q%250F.html" class="regionlink" data-region="Республика Ингушетия" data-subdomain="magas">Республика Ингушетия</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%251AP0P%3BP%253CQ%250BP%253AP8Q%250F.html" class="regionlink" data-region="Республика Калмыкия" data-subdomain="elista">Республика Калмыкия</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%251AP0Q.html" class="regionlink" data-region="Республика Карелия" data-subdomain="karelia">Республика Карелия</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%251AP%253EP%253CP8.html" class="regionlink" data-region="Республика Коми" data-subdomain="komi">Республика Коми</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%251AQ.html" class="regionlink" data-region="Республика Крым" data-subdomain="crimea">Республика Крым</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%251CP0Q.html" class="regionlink" data-region="Республика Марий-Эл" data-subdomain="mariel">Республика Марий-Эл</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%251CP%253EQ.html" class="regionlink" data-region="Республика Мордовия" data-subdomain="mordovia">Республика Мордовия</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P!P0Q%2505P0%2520(P%252FP%253AQ%2503Q%2502P8Q%250F).html" class="regionlink" data-region="Республика Саха (Якутия)" data-subdomain="sakha">Республика Саха (Якутия)</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P!P5P2P5Q.html" class="regionlink" data-region="Республика Северная Осетия - Алания"  data-subdomain="alania">Республика Северная Осетия - Алания</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%2522P0Q%2502P0Q.html" class="regionlink" data-region="Республика Татарстан"  data-subdomain="tatarstan">Республика Татарстан</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%2522Q%250BP2P0.html" class="regionlink" data-region="Республика Тыва"  data-subdomain="tyva">Республика Тыва</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%2525P0P%253AP0Q%2501P8Q%250F.html" class="regionlink" data-region="Республика Хакасия" data-subdomain="hakas">Республика Хакасия</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2520P%253EQ%2501Q%2502P%253EP2Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html" class="regionlink" data-region="Ростовская область" data-subdomain="rostov">Ростовская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2520Q%250FP7P0P=Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html" class="regionlink" data-region="Рязанская область" data-subdomain="rzn">Рязанская область</a>
-            </li>
-        </ul>
-    </div>
-    <div class="city-list__group">
-        <div class="city-list__group-letter">С</div>
-        <ul>
-            <li>
-                <a href="../index.html@region=P!P0P%253CP0Q.html" class="regionlink" data-region="Самарская область" data-subdomain="samara">Самарская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P!P0P=P%253AQ%2502-P%251FP5Q%2502P5Q.html" class="regionlink" data-region="Санкт-Петербург" data-subdomain="spb">Санкт-Петербург</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P!P0Q.html" class="regionlink" data-region="Саратовская область" data-subdomain="saratov">Саратовская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P!P0Q%2505P0P%3BP8P=Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html" class="regionlink" data-region="Сахалинская область" data-subdomain="sakhalin">Сахалинская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P!P2P5Q.html" class="regionlink" data-region="Свердловская область" data-subdomain="ekt">Свердловская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P!P5P2P0Q%2501Q%2502P%253EP%25BFP%253EP%3BQ%250C.html" class="regionlink" data-region="Севастополь" data-subdomain="sevastopl">Севастополь</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P!P%253CP%253EP%3BP5P=Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html" class="regionlink" data-region="Смоленская область" data-subdomain="smolensk">Смоленская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P!Q%2502P0P2Q.html" class="regionlink" data-region="Ставропольский край" data-subdomain="stavropol">Ставропольский край</a>
-            </li>
-        </ul>
-    </div>
-    <div class="city-list__group">
-        <div class="city-list__group-letter">Т</div>
-        <ul>
-            <li>
-                <a href="../index.html@region=P%2522P0P%253CP1P%253EP2Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html" class="regionlink" data-region="Тамбовская область" data-subdomain="tambov">Тамбовская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2522P2P5Q.html" class="regionlink" data-region="Тверская область" data-subdomain="tver">Тверская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2522P%253EP%253CQ%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html" class="regionlink" data-region="Томская область" data-subdomain="tomsk">Томская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2522Q%2503P%3BQ%250CQ%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html" class="regionlink" data-region="Тульская область" data-subdomain="tula">Тульская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2522Q%250EP%253CP5P=Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html" class="regionlink" data-region="Тюменская область" data-subdomain="tyumen">Тюменская область</a>
-            </li>
-        </ul>
-    </div>
-    <div class="city-list__group">
-        <div class="city-list__group-letter">У</div>
-        <ul>
-            <li>
-                <a href="../index.html@region=P.html" class="regionlink" data-region="Удмуртская республика" data-subdomain="izhevsk">Удмуртская республика</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P.html" class="regionlink" data-region="Ульяновская область" data-subdomain="uln">Ульяновская область</a>
-            </li>
-        </ul>
-    </div>
-    <div class="city-list__group">
-        <div class="city-list__group-letter">Х</div>
-        <ul>
-            <li>
-                <a href="../index.html@region=P%2525P0P1P0Q.html" class="regionlink" data-region="Хабаровский край" data-subdomain="khv">Хабаровский край</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%2525P0P=Q%2502Q%250B-P%251CP0P=Q%2501P8P9Q%2501P%253AP8P9%2520P0P2Q%2502P%253EP=P%253EP%253CP=Q%250BP9%2520P%253EP%253AQ.html" class="regionlink" data-region="Ханты-Мансийский автономный округ" data-subdomain="hmao">Ханты-Мансийский автономный округ</a>
-            </li>
-        </ul>
-    </div>
-    <div class="city-list__group">
-        <div class="city-list__group-letter">Ч</div>
-        <ul>
-            <li>
-                <a href="../index.html@region=P'P5P%3BQ%250FP1P8P=Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html" class="regionlink" data-region="Челябинская область" data-subdomain="chelyabinsk">Челябинская область</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P'P5Q%2507P5P=Q%2501P%253AP0Q%250F%2520Q.html" class="regionlink" data-region="Чеченская республика" data-subdomain="chechnya">Чеченская республика</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P'Q%2503P2P0Q%2508Q%2501P%253AP0Q%250F%2520Q.html" class="regionlink" data-region="Чувашская республика" data-subdomain="chuvashia">Чувашская республика</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P'Q%2503P%253AP%253EQ%2502Q%2501P%253AP8P9%2520P0P2Q%2502P%253EP=P%253EP%253CP=Q%250BP9%2520P%253EP%253AQ.html" class="regionlink" data-region="Чукотский автономный округ" data-subdomain="chukotka">Чукотский автономный округ</a>
-            </li>
-        </ul>
-    </div>
-    <div class="city-list__group">
-        <div class="city-list__group-letter">Я</div>
-        <ul>
-            <li>
-                <a href="../index.html@region=P%252FP%253CP0P%3BP%253E-P%251DP5P=P5Q%2506P%253AP8P9%2520P0P2Q%2502P%253EP=P%253EP%253CP=Q%250BP9%2520P%253EP%253AQ.html" class="regionlink" data-region="Ямало-Ненецкий автономный округ" data-subdomain="yanao">Ямало-Ненецкий автономный округ</a>
-            </li>
-            <li>
-                <a href="../index.html@region=P%252FQ.html" class="regionlink" data-region="Ярославская область" data-subdomain="yar">Ярославская область</a>
-            </li>
-        </ul>
-    </div>
-</div>
-        </div>
-    </div>
-</div>
+    
     </div>
     
         <!-- Yandex.Metrika counter -->
