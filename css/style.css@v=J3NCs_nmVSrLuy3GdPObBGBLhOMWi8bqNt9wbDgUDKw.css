@@ -6,6 +6,7 @@
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
     padding: 0;
     margin: 0;
+    font-family: 'ALS Sector Regular Regular';
 }
 
 table {
@@ -1639,7 +1640,7 @@ h1 {
 }
 
 .news_open_wp h2 {
-    font: 32px 'gilroybold';
+    font: 32px 'ALS Sector Regular Regular';
     text-transform: uppercase;
     margin-bottom: 40px;
     color: #000;
