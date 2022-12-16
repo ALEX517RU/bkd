@@ -1728,6 +1728,7 @@
   .show_mobile .nb_link {
     font-size: 14px;
     line-height: 22px;
+    font-family: 'ALS Sector Regular Regular';
   }
 
   .show_mobile .arrows_no {
@@ -2266,6 +2267,7 @@
 
   .show_mobile .program_place_column {
     width: 100%;
+    padding: 30px;
   }
 
   .show_mobile .clt_block:first-child {

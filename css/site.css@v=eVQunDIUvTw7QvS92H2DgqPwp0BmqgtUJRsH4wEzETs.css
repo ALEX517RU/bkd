@@ -2382,6 +2382,11 @@ table.contacts__table, table.contacts__table td {
     color: white;
 }
 
+
+a:hover {
+    color: #DCAA44;
+}
+
 a:active {
     color: #DCAA44;
 }
@@ -3395,7 +3400,7 @@ div[class^="news_open_slider"] {
 
 @media only screen and (max-width: 1023px) {
     .show_mobile .nb_img img {
-        height: 220px;
+        height: 100%;
     }
 
     .db_info {
@@ -3403,9 +3408,7 @@ div[class^="news_open_slider"] {
     }
 }
 
-.nb_img img {
-    height: 250px;
-}
+
 
 .arrows_no a {
     width: 60px;
