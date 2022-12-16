@@ -11,6 +11,12 @@
             gtag('js', new Date());
 
             gtag('config', 'UA-153808431-1');
+
+
+
+
+       
+
         </script>
     
 
@@ -57,7 +63,299 @@
 
     <link media="all" rel="stylesheet" type="text/css" href="js/simpleLightBox.min.css" />
 
-    
+    <style>
+.mob_1 {
+    font-family: "ALS Sector Regular Regular";  
+}
+
+.mob_2 {
+    font-family: "ALS Sector Regular Regular"; 
+}
+
+.glav {
+    font-family: "ALS Sector Regular Regular"; 
+}
+
+body {
+    font: 'ALS Sector Regular Regular';
+}
+
+
+.news_block_m.col-lg-4.col-md-6:nth-child(n + 19) {
+    display: none;
+}
+
+.news_block_m.col-lg-4.col-md-6.is-visible {
+    display: block;
+}
+
+
+.show-more {
+        font-family: 'ALS Sector Regular Regular';
+        grid-column: 2 / 4 span;
+        width: 50%;
+        align-content: center;
+        line-height: 40px;
+        background-color: #DCAA43;
+        border: 4px solid #fff;
+        border-radius: 10px;
+        color: #fff;
+        text-align: center;
+        margin-left: 25%;
+        margin-right: auto;
+    }
+
+
+@media only screen and (min-width: 1024px) {
+  .show_mobile .dm_link {
+    display: none;
+  }
+
+  .mob_social {
+    display: none;
+  }
+
+  .map_modal {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .modal_fraginfo {
+    right: 0px;
+    position: absolute;
+  }
+
+  .modal_historyinfo {
+    left: 30px;
+    top: 60px;
+    position: absolute;
+  }
+
+
+
+
+}
+
+.mobile_modal_wp {
+    width: 320px;
+    box-sizing: border-box;
+}
+
+    .mobile_modal_wp + .fancybox-close-small {
+        top: 3px;
+        right: 5px;
+    }
+
+#mobile_modal {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.popup1 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease 0s;
+}
+.popup1:target {
+    opacity: 1;
+    visibility: visible;
+}
+.popup1:target .popup_content {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+.popup_area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+.popup_body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 30px 10px 10px;
+    transition: all 0.8s ease 0s;
+}
+.popup_content {
+    background-color: #fff;
+    color: #000;
+    max-width: 1007px;
+    padding: 0px;
+    position: relative;
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    transform: translate(0px, -100%);
+}
+.popup_close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: rgb(172, 172, 172);
+    text-decoration: none;
+}
+.popup_title {
+    font-size: 25px;
+    padding: 30px;
+    justify-content: left;
+    margin: 0px 0px 0px 0px;
+}
+.srok {
+    font-size: 15px;
+    padding-bottom: 5px;
+    color: #e48338;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.image-slider_image :last-child {
+    margin-right: 0px;
+}
+.popup_img {
+    float: left;
+    margin-right: 7px;
+    text-align: center;
+}
+
+.popup_text {
+    align-items: center;
+    padding: 20px 0;
+}
+
+.popup_title {
+    font-weight: 700;
+}
+
+
+.leaflet-tooltip {
+	font-family: 'ALS Sector';
+	font-size: 15px;
+	line-height: 19px;
+	position: absolute;
+	padding: 6px;
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	color: #222;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+	}
+
+.program_place_column {
+    float: left;
+    width: calc(100% - 450px);
+    padding-left: 40px;
+}
+
+.col-xl-4col-lg-6col-md-6col-sm-12col-xs-12 {
+    float: right;
+    width: 450px;
+    margin-top: -60px;
+
+}
+
+.circle_head {
+    min-height: 100px;
+    margin-bottom: 15px;
+}
+
+.clt_block:first-child {
+    padding-left: 60px;
+}
+
+.clt_block {
+    padding-left: 60px;
+}
+
+
+@media (max-width: 1100px) {
+
+.header__city {
+  display: block;
+  margin-top: 3em;
+  padding-left: 3em;
+  font-size: 1.0em;
+  line-height: 1.5em;
+  font-weight: 300;
+  letter-spacing: .04em;
+  display: flex;
+  align-items: flex-end;
+}
+
+
+
+
+.header__socials {
+  display: block;
+  margin-left: 30px;
+  margin-right: -10px;
+  margin-top: -10px;
+  width: 54px;
+}
+
+.header__socials-link {
+  height: 15px;
+}
+
+.header__socials-link img {
+  height: 15px;
+}
+
+.popup_img {
+  width: 48%;
+}
+
+.popup_content {
+  width: 100%;
+}
+
+.popup_body {
+  padding: 0 0 0 0;
+}
+.swiper-slide {
+  width: 100%;
+  margin-right: 0px;
+}
+
+.col-xl-4col-lg-6col-md-6col-sm-12col-xs-12 {
+    float: right;
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .show_mobile .clt_block:first-child {
+    padding-left: 30px;
+  }
+
+
+
+}
+
+
+
+
+
+    </style>
 
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/swiper.jquery.min.js@v=JUiO3AMUvYe2uIaHUQ9wZDoMBDSnAI2EQ_glC7Psf1o"></script>
@@ -76,11 +374,11 @@
     <script src="letsee/letsee.js"></script>
 
     
-    <link rel="canonical" href="https://bkdrf.ru/news" />
-
 </head>
 
 <body>
+
+
     <div class="page_wp">
 
         <div class="mob_btn">
@@ -92,117 +390,82 @@
         </div>
 
 
+
+
 <header class="header">
     <div class="header__container container">
         <div class="header__top-line">
             <div class="header__logo-wrap">
-                <a class="header__logo" href="index.html" data-js="logo">
+                <a class="header__logo">
                         <span class="header__logo-image"></span>
                 </a>
-                    <span class="header__city" data-js="city">
-                        <span>
-                            Ваш регион <a class="header__city-link" data-js="select-city" href="javascript:void(0)">
-                                <span class="header__city-name"></span><span class="city-name-question">?</span>
+                <div class="header__city" data-js="city">
+                    <span>
+Ваш регион                                    <a class="header__city-link">
+                                Новгородская область
                                 <span class="header__city-icon">
-                                    <svg class="svg-icon" viewBox="0 0 20 20" width="1.6em" height="2em" style="width: 1.6em; height: 2em;">
-                                        <use xlink:href="/images/new-design/icons/sprite.svg#ballon"></use>
+                                    <svg class="svg-icon" viewBox="0 0 20 20" width="2rem" height="2rem" style="width: 2rem; height: 2rem;">
+                                        <use xlink:href="/images/icons/sprite.svg#ballon"></use>
                                     </svg>
                                 </span>
                             </a>
-                        </span>
-
                     </span>
+                </div>
             </div>
 
             <div class="header__toolbar">
-                <div class="header__mobile">
-                    <a class="header__control-hamburger" href="news.html#" data-js="open-nav-modal">
-                        <svg class="svg-icon -hamburger" viewBox="0 0 24 17" width="3em" height="3em" style="width: 3em; height: 3em;">
-                            <use xlink:href="/images/new-design/icons/sprite.svg#hamburger"></use>
-                        </svg>
+               
+                <nav class="header__socials" data-js="header-socials">
+                    <a class="header__socials-link" href="https://vk.com/bkadnovgorod" target="_blank">
+                        <img src="images/9.png">
                     </a>
-                    <span data-js="close-nav-modal-wrap">
-                        <a class="nav-modal__close" href="javascript:void(0)" data-js="close-nav-modal">
-                            <svg class="svg-icon -close" viewBox="0 0 20 20" width="2em" height="2em" style="width: 2em; height: 2em;">
-                                <use xlink:href="/images/new-design/icons/sprite.svg#close"></use>
+                    <a class="header__socials-link" href="https://www.instagram.com/bkdrussia/" target="_blank">
+                        <img src="images/10.png">
+                    </a>
+                    <a class="header__socials-link" href="https://ok.ru/bkdrussia" target="_blank">
+                        <img src="images/11.png">
+                    </a>
+                    <a class="header__socials-link" href="https://twitter.com/bkdrussia" target="_blank">
+                        <img src="images/12.png">
+                    </a>
+                    <a class="header__socials-link" href="https://www.facebook.com/bkdrussia" target="_blank">
+                        <img src="images/13.png">
+                    </a>
+                    <a class="header__socials-link" href="https://t.me/s/Novgorodavtodor" target="_blank">
+                        <img src="images/14.png">
+                    </a>
+                </nav>
+                <div class="glav">
+                    <a href="javascript://" onclick="letsee_toggle_panel()" class="header__actions-eye-link">
+                        <span class="header__actions-eye-text"><a href="index.html">На главную</a></span>
+                        <span class="header__actions-eye-icon">
+                            <svg class="svg-icon" viewBox="0 0 24 24" width="2.4rem" height="2.4rem" style="width: 2.4rem; height: 2.4rem;">
+                                <use xlink:href="/images/icons/sprite.svg#eye"></use>
                             </svg>
-                        </a>
-                    </span>
+                        </span>
+                    </a>
                 </div>
-                <div class="header__socials-w-search">
-                    <div class="header__search-wrap" data-js="header-search">
-                        <div class="header__search ">
-                            <div class="header__search-container">
-                                <form action="https://novgorod.bkdrf.ru/search" method="post">
-                                    <input class="header__search-input" name="search" type="search" placeholder="&#x41F;&#x43E;&#x438;&#x441;&#x43A;" />
-                                    <button class="header__search-button" type="submit" data-js="header-search-btn">
-                                        <svg class="svg-icon" viewBox="0 0 20 20" width="1.5em" height="1.5em" style="width: 1.5em; height: 1.5em;">
-                                            <use xlink:href="/images/new-design/icons/sprite.svg#search"></use>
-                                        </svg>
-                                    </button>
-                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PEB9kw2TUJNn4s9Y8lTMh-Qma1jm9OoFhdtalFzUaj5TkhfX5J3ltGlMZs_fm6H7Sm-zMq-2HdJBJpite8JE7NuUVEThUnlPQt7u_hrIHeT2aja4oGbnySWLqF_eTqjHJHLAbeTzSWyx81jw8Xx4TA" /></form>
-
-                            </div>
-                        </div>
-                    </div>
-                    <nav class="header__socials" data-js="header-socials">
-                        <a class="header__socials-link" href="https://vk.com/bkdnational" target="_blank" rel="noreferrer">
-                            <svg class="svg-icon" viewBox="0 0 32 32" width="3em" height="3em" style="width: 3em; height: 3em;">
-                                <use xlink:href="/images/new-design/icons/sprite.svg#social-vk"></use>
-                            </svg>
-                        </a>
-                        <a class="header__socials-link" href="https://www.instagram.com/bkdrussia/" target="_blank" rel="noreferrer">
-                            <svg class="svg-icon" viewBox="0 0 32 32" width="3em" height="3em" style="width: 3em; height: 3em;">
-                                <use xlink:href="/images/new-design/icons/sprite.svg#social-ig"></use>
-                            </svg>
-                        </a>
-                        <a class="header__socials-link" href="https://ok.ru/bkdrussia" target="_blank" rel="noreferrer">
-                            <svg class="svg-icon" viewBox="0 0 32 32" width="3em" height="3em" style="width: 3em; height: 3em;">
-                                <use xlink:href="/images/new-design/icons/sprite.svg#social-ok"></use>
-                            </svg>
-                        </a>
-                        <a class="header__socials-link" href="https://twitter.com/bkdrussia" target="_blank" rel="noreferrer">
-                            <svg class="svg-icon" viewBox="0 0 28 28" width="3em" height="3em" style="width: 3em; height: 3em;">
-                                <use xlink:href="/images/new-design/icons/sprite.svg#social-tw"></use>
-                            </svg>
-                        </a>
-                        <a class="header__socials-link" href="https://www.facebook.com/bkdrussia" target="_blank" rel="noreferrer">
-                            <svg class="svg-icon" viewBox="0 0 28 28" width="3em" height="3em" style="width: 3em; height: 3em;">
-                                <use xlink:href="/images/new-design/icons/sprite.svg#social-fb"></use>
-                            </svg>
-                        </a>
-                    </nav>
-                </div>
-
                 <div class="header__actions">
                     <div class="header__actions-eye">
                         <a href="javascript://" onclick="letsee_toggle_panel()" class="header__actions-eye-link">
                             <span class="header__actions-eye-text">Версия для слабовидящих</span>
                             <span class="header__actions-eye-icon">
-                                <svg class="svg-icon" viewBox="0 0 24 24" width="2em" height="2.2em" style="width: 2em; height: 2.2em;">
-                                    <use xlink:href="/images/new-design/icons/sprite.svg#eye"></use>
+                                <svg class="svg-icon" viewBox="0 0 24 24" width="2.4rem" height="2.4rem" style="width: 2.4rem; height: 2.4rem;">
+                                    <use xlink:href="/images/icons/sprite.svg#eye"></use>
                                 </svg>
                             </span>
-                        </a>
+
                     </div>
 
-                                <div class="header__actions-lang">
-                                        <span><a class="header__actions-lang-link is-active">Ru</a>/<a class="regionlink header__actions-lang-link" data-subdomain="en" href="javascript:void(0)">En</a></span>
-                                </div>
 
-
-
-                    <div class="header__actions-login">
-                        <div class="lkb_top">
-                                <a class="header__actions-login-link" href="account/login.html">
-                                    <span>Войти</span>
-                                    <svg class="svg-icon" viewBox="0 0 24 24" width="2.4em" height="2.4em" style="width: 2.4em; height: 2.4em;">
-
-                                        <use xlink:href="/images/new-design/icons/sprite.svg#login"></use>
-                                    </svg>
-                                </a>
-                        </div>
+                    <div class="header__actions-lang">
+                            <span><a class="header__actions-lang-link is-active">Ru</a>/<a class="regionlink header__actions-lang-link" data-subdomain="en" href="javascript:void(0)">En</a></span>
                     </div>
+
+
+
+
+                    
                 </div>
             </div>
         </div>
@@ -216,24 +479,19 @@
                             <a class="header__nav-submenu-link" href="documents.html">Документы</a>
                             <a class="header__nav-submenu-link" href="home/statistics.html">Динамика показателей</a>
                             <a class="header__nav-submenu-link" href="programs.html">Программы дорожных работ</a>
-                            <a class="header__nav-submenu-link" href="about/safetyroads17_19.html">Приоритетный проект «Безопасные и качественные дороги» 2017 - 2019</a>
+                           
                         </span>
                     </span>
                 </span>
                 <span class="header__nav-item">
                     <span class="header__nav-item-wrap">
-                        <a class="header__nav-link" href="javascript:void(0)">Новости</a>
-                        <span class="header__nav-submenu">
-                            <a class="header__nav-submenu-link" href="news@isMain=true.html">Главные новости</a>
-                            <a class="header__nav-submenu-link" href="news@isRegional=true.html">Новости регионов</a>
-                            <a class="header__nav-submenu-link" href="news@isTrend=true.html">Новости по направлениям</a>
-                            <a class="header__nav-submenu-link" href="news.html">Все новости</a>
-                        </span>
+                        <a class="header__nav-link" href="news.html">Новости</a>
+                        
                     </span>
                 </span>
                 <span class="header__nav-item">
                     <span class="header__nav-item-wrap">
-                        <a class="header__nav-link" href="map.1.html">Карта</a>
+                        <a class="header__nav-link" href="map/velikiy-novgorod.html">Карта</a>
                     </span>
                 </span>
                 <span class="header__nav-item">
@@ -360,235 +618,267 @@
             <div class="nt_search_wp flex" style="justify-content: flex-end">
                 <div class="nts_tags_wp">
                     <div class="nts_tags">
-                        <a>&#x422;&#x435;&#x433;</a><span></span>
+                        <a>ТЕГ</a><span></span>
                         <div class="nts_tags_toggle">
                             <a href="news.html">Все</a>
-                                    <a href="news@tag=P%2510P%251FP%2512P%2513P%251A.html">&#x410;&#x41F;&#x412;&#x413;&#x41A;</a>
-                                    <a href="news@tag=P%2510P%3BQ%2502P0P9Q%2501P%253AP8P9%2520P%253AQ.html">&#x410;&#x43B;&#x442;&#x430;&#x439;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;</a>
-                                    <a href="news@tag=P%2510P%253CQ%2503Q.html">&#x410;&#x43C;&#x443;&#x440;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%2510P=P%253EP=Q%2501.html">&#x410;&#x43D;&#x43E;&#x43D;&#x441;</a>
-                                    <a href="news@tag=P%2510Q.html">&#x410;&#x440;&#x445;&#x430;&#x43D;&#x433;&#x435;&#x43B;&#x44C;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%2510Q%2501Q%2502Q.html">&#x410;&#x441;&#x442;&#x440;&#x430;&#x445;&#x430;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%2511P5P7P%253EP%25BFP0Q%2501P=P%253EQ%2501Q%2502Q%250C.html">&#x411;&#x435;&#x437;&#x43E;&#x43F;&#x430;&#x441;&#x43D;&#x43E;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%2511P5P%3BP3P%253EQ.html">&#x411;&#x435;&#x43B;&#x433;&#x43E;&#x440;&#x43E;&#x434;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%2511Q.html">&#x411;&#x440;&#x44F;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%2512P%3BP0P4P8P%253CP8Q.html">&#x412;&#x43B;&#x430;&#x434;&#x438;&#x43C;&#x438;&#x440;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%2512P%253EP%3BP3P%253EP3Q.html">&#x412;&#x43E;&#x43B;&#x433;&#x43E;&#x433;&#x440;&#x430;&#x434;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%2512P%253EP%3BP%253EP3P%253EP4Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">&#x412;&#x43E;&#x43B;&#x43E;&#x433;&#x43E;&#x434;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%2512P%253EQ.html">&#x412;&#x43E;&#x440;&#x43E;&#x43D;&#x435;&#x436;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%2514P%253EQ.html">&#x414;&#x43E;&#x440;&#x43E;&#x433;&#x438; &#x43A; &#x427;&#x41C;</a>
-                                    <a href="news@tag=P%2514P%253EQ.html">&#x414;&#x43E;&#x440;&#x43E;&#x433;&#x438; &#x43A; &#x431;&#x43E;&#x43B;&#x44C;&#x43D;&#x438;&#x446;&#x430;&#x43C;</a>
-                                    <a href="news@tag=P%2514P%253EQ.html">&#x414;&#x43E;&#x440;&#x43E;&#x433;&#x438; &#x43A; &#x43E;&#x431;&#x440;&#x430;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x43C; &#x443;&#x447;&#x440;&#x435;&#x436;&#x434;&#x435;&#x43D;&#x438;&#x44F;&#x43C;</a>
-                                    <a href="news@tag=P%2514P%253EQ.html">&#x414;&#x43E;&#x440;&#x43E;&#x433;&#x438; &#x43A; &#x441;&#x43E;&#x446;&#x438;&#x430;&#x43B;&#x44C;&#x43D;&#x43E; &#x437;&#x43D;&#x430;&#x447;&#x438;&#x43C;&#x44B;&#x43C; &#x443;&#x447;&#x440;&#x435;&#x436;&#x434;&#x435;&#x43D;&#x438;&#x44F;&#x43C;</a>
-                                    <a href="news@tag=P%2514P%253EQ%2501Q%2502Q%2503P%25BFP=P0Q%250F%2520Q%2501Q.html">&#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x430;&#x44F; &#x441;&#x440;&#x435;&#x434;&#x430;</a>
-                                    <a href="news@tag=P%2515P2Q.html">&#x415;&#x432;&#x440;&#x435;&#x439;&#x441;&#x43A;&#x430;&#x44F; &#x430;&#x432;&#x442;&#x43E;&#x43D;&#x43E;&#x43C;&#x43D;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%2517P0P1P0P9P%253AP0P%3BQ%250CQ%2501P%253AP8P9%2520P%253AQ.html">&#x417;&#x430;&#x431;&#x430;&#x439;&#x43A;&#x430;&#x43B;&#x44C;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;</a>
-                                    <a href="news@tag=P%2518P%2522P!.html">&#x418;&#x422;&#x421;</a>
-                                    <a href="news@tag=P%2518P2P0P=P%253EP2Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">&#x418;&#x432;&#x430;&#x43D;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%2518Q.html">&#x418;&#x440;&#x43A;&#x443;&#x442;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%2518Q%2502P%253EP3P8.html">&#x418;&#x442;&#x43E;&#x433;&#x438;</a>
-                                    <a href="news@tag=P%251AP%2516P&amp;.html">&#x41A;&#x416;&#x426;</a>
-                                    <a href="news@tag=P%251AP0P1P0Q.html">&#x41A;&#x430;&#x431;&#x430;&#x440;&#x434;&#x438;&#x43D;&#x43E;-&#x411;&#x430;&#x43B;&#x43A;&#x430;&#x440;&#x441;&#x43A;&#x430;&#x44F; &#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430;</a>
-                                    <a href="news@tag=P%251AP0P%3BP8P=P8P=P3Q.html">&#x41A;&#x430;&#x43B;&#x438;&#x43D;&#x438;&#x43D;&#x433;&#x440;&#x430;&#x434;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%251AP0P%3BQ%2503P6Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">&#x41A;&#x430;&#x43B;&#x443;&#x436;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%251AP0P%253CQ%2507P0Q%2502Q%2501P%253AP8P9%2520P%253AQ.html">&#x41A;&#x430;&#x43C;&#x447;&#x430;&#x442;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;</a>
-                                    <a href="news@tag=P%251AP0P%25BFP8Q%2502P0P%3BP%253EP5P%253CP%253AP8P5%2520P%253EP1Q%250AP5P%253AQ%2502Q%250B.html">&#x41A;&#x430;&#x43F;&#x438;&#x442;&#x430;&#x43B;&#x43E;&#x435;&#x43C;&#x43A;&#x438;&#x435; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x44B;</a>
-                                    <a href="news@tag=P%251AP0Q.html">&#x41A;&#x430;&#x440;&#x430;&#x447;&#x430;&#x435;&#x432;&#x43E;-&#x427;&#x435;&#x440;&#x43A;&#x435;&#x441;&#x441;&#x43A;&#x430;&#x44F; &#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430;</a>
-                                    <a href="news@tag=P%251AP5P%253CP5Q.html">&#x41A;&#x435;&#x43C;&#x435;&#x440;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C; &#x2013; &#x41A;&#x443;&#x437;&#x431;&#x430;&#x441;&#x441;</a>
-                                    <a href="news@tag=P%251AP8Q.html">&#x41A;&#x438;&#x440;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%251AP%253EP=Q%2502Q.html">&#x41A;&#x43E;&#x43D;&#x442;&#x440;&#x430;&#x43A;&#x442;&#x430;&#x446;&#x438;&#x44F;</a>
-                                    <a href="news@tag=P%251AP%253EP=Q%2502Q.html">&#x41A;&#x43E;&#x43D;&#x442;&#x440;&#x43E;&#x43B;&#x44C;</a>
-                                    <a href="news@tag=P%251AP%253EQ%2501Q%2502Q.html">&#x41A;&#x43E;&#x441;&#x442;&#x440;&#x43E;&#x43C;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%251AQ.html">&#x41A;&#x440;&#x430;&#x441;&#x43D;&#x43E;&#x434;&#x430;&#x440;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;</a>
-                                    <a href="news@tag=P%251AQ.html">&#x41A;&#x440;&#x430;&#x441;&#x43D;&#x43E;&#x44F;&#x440;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;</a>
-                                    <a href="news@tag=P%251AQ%2503Q.html">&#x41A;&#x443;&#x440;&#x433;&#x430;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%251AQ%2503Q.html">&#x41A;&#x443;&#x440;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%251BP5P=P8P=P3Q.html">&#x41B;&#x435;&#x43D;&#x438;&#x43D;&#x433;&#x440;&#x430;&#x434;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%251BP8P%25BFP5Q%2506P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">&#x41B;&#x438;&#x43F;&#x435;&#x446;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%251BQ%2503Q%2507Q%2508P8P5%2520P%25BFQ.html">&#x41B;&#x443;&#x447;&#x448;&#x438;&#x435; &#x43F;&#x440;&#x430;&#x43A;&#x442;&#x438;&#x43A;&#x438;</a>
-                                    <a href="news@tag=P%251CP0P3P0P4P0P=Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">&#x41C;&#x430;&#x433;&#x430;&#x434;&#x430;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%251CP=P5P=P8P5.html">&#x41C;&#x43D;&#x435;&#x43D;&#x438;&#x435;</a>
-                                    <a href="news@tag=P%251CP%253EQ%2501P%253AP%253EP2Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">&#x41C;&#x43E;&#x441;&#x43A;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%251CP%253EQ%2501Q%2502Q%250B%2520P8%2520P%25BFQ%2503Q%2502P5P%25BFQ.html">&#x41C;&#x43E;&#x441;&#x442;&#x44B; &#x438; &#x43F;&#x443;&#x442;&#x435;&#x43F;&#x440;&#x43E;&#x432;&#x43E;&#x434;&#x44B;</a>
-                                    <a href="news@tag=P%251CQ%2503Q.html">&#x41C;&#x443;&#x440;&#x43C;&#x430;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%251DP5P=P5Q%2506P%253AP8P9%2520P0P2Q%2502P%253EP=P%253EP%253CP=Q%250BP9%2520P%253EP%253AQ.html">&#x41D;&#x435;&#x43D;&#x435;&#x446;&#x43A;&#x438;&#x439; &#x430;&#x432;&#x442;&#x43E;&#x43D;&#x43E;&#x43C;&#x43D;&#x44B;&#x439; &#x43E;&#x43A;&#x440;&#x443;&#x433;</a>
-                                    <a href="news@tag=P%251DP8P6P5P3P%253EQ.html">&#x41D;&#x438;&#x436;&#x435;&#x433;&#x43E;&#x440;&#x43E;&#x434;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%251DP%253EP2P3P%253EQ.html">&#x41D;&#x43E;&#x432;&#x433;&#x43E;&#x440;&#x43E;&#x434;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%251DP%253EP2P%253EQ%2501P8P1P8Q.html">&#x41D;&#x43E;&#x432;&#x43E;&#x441;&#x438;&#x431;&#x438;&#x440;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%251EP1P=P%253EP2P%3BP5P=P8P5%2520Q%2502Q.html">&#x41E;&#x431;&#x43D;&#x43E;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x442;&#x440;&#x430;&#x43D;&#x441;&#x43F;&#x43E;&#x440;&#x442;&#x430;</a>
-                                    <a href="news@tag=P%251EP1Q%2509P5Q%2501Q%2502P2P5P=P=P%253EQ%2501Q%2502Q%250C.html">&#x41E;&#x431;&#x449;&#x435;&#x441;&#x442;&#x432;&#x435;&#x43D;&#x43D;&#x43E;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%251EP1Q%2509P5Q%2501Q%2502P2P5P=P=Q%250BP9%2520P%253AP%253EP=Q%2502Q.html">&#x41E;&#x431;&#x449;&#x435;&#x441;&#x442;&#x432;&#x435;&#x43D;&#x43D;&#x44B;&#x439; &#x43A;&#x43E;&#x43D;&#x442;&#x440;&#x43E;&#x43B;&#x44C;</a>
-                                    <a href="news@tag=P%251EP%253CQ%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">&#x41E;&#x43C;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%251EQ.html">&#x41E;&#x440;&#x435;&#x43D;&#x431;&#x443;&#x440;&#x433;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%251EQ.html">&#x41E;&#x440;&#x43B;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%251FP5P=P7P5P=Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">&#x41F;&#x435;&#x43D;&#x437;&#x435;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%251FP5Q.html">&#x41F;&#x435;&#x440;&#x43C;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;</a>
-                                    <a href="news@tag=P%251FP%3BP0P=Q%250B.html">&#x41F;&#x43B;&#x430;&#x43D;&#x44B;</a>
-                                    <a href="news@tag=P%251FQ.html">&#x41F;&#x440;&#x438;&#x43C;&#x43E;&#x440;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;</a>
-                                    <a href="news@tag=P%251FQ%2501P%253AP%253EP2Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">&#x41F;&#x441;&#x43A;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%2520P0P7P2P8Q%2502P8P5%2520Q%2504P5P4P5Q.html">&#x420;&#x430;&#x437;&#x432;&#x438;&#x442;&#x438;&#x435; &#x444;&#x435;&#x434;&#x435;&#x440;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x439; &#x43C;&#x430;&#x433;&#x438;&#x441;&#x442;&#x440;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x439; &#x441;&#x435;&#x442;&#x438;</a>
-                                    <a href="news@tag=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%2510P4Q%250BP3P5Q%250F.html">&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x410;&#x434;&#x44B;&#x433;&#x435;&#x44F;</a>
-                                    <a href="news@tag=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%2510P%3BQ%2502P0P9.html">&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x410;&#x43B;&#x442;&#x430;&#x439;</a>
-                                    <a href="news@tag=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%2511P0Q%2508P%253AP%253EQ.html">&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x411;&#x430;&#x448;&#x43A;&#x43E;&#x440;&#x442;&#x43E;&#x441;&#x442;&#x430;&#x43D;</a>
-                                    <a href="news@tag=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%2511Q%2503Q.html">&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x411;&#x443;&#x440;&#x44F;&#x442;&#x438;&#x44F;</a>
-                                    <a href="news@tag=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%2514P0P3P5Q%2501Q%2502P0P=.html">&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x414;&#x430;&#x433;&#x435;&#x441;&#x442;&#x430;&#x43D;</a>
-                                    <a href="news@tag=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%2518P=P3Q%2503Q%2508P5Q%2502P8Q%250F.html">&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x418;&#x43D;&#x433;&#x443;&#x448;&#x435;&#x442;&#x438;&#x44F;</a>
-                                    <a href="news@tag=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%251AP0P%3BP%253CQ%250BP%253AP8Q%250F.html">&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x41A;&#x430;&#x43B;&#x43C;&#x44B;&#x43A;&#x438;&#x44F;</a>
-                                    <a href="news@tag=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%251AP0Q.html">&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x41A;&#x430;&#x440;&#x435;&#x43B;&#x438;&#x44F;</a>
-                                    <a href="news@tag=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%251AP%253EP%253CP8.html">&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x41A;&#x43E;&#x43C;&#x438;</a>
-                                    <a href="news@tag=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%251AQ.html">&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x41A;&#x440;&#x44B;&#x43C;</a>
-                                    <a href="news@tag=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%251CP0Q.html">&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x41C;&#x430;&#x440;&#x438;&#x439; &#x42D;&#x43B;</a>
-                                    <a href="news@tag=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%251CP%253EQ.html">&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x41C;&#x43E;&#x440;&#x434;&#x43E;&#x432;&#x438;&#x44F;</a>
-                                    <a href="news@tag=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P!P0Q%2505P0%2520(P%252FP%253AQ%2503Q%2502P8Q%250F).html">&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x421;&#x430;&#x445;&#x430; (&#x42F;&#x43A;&#x443;&#x442;&#x438;&#x44F;)</a>
-                                    <a href="news@tag=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P!P5P2P5Q.html">&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x421;&#x435;&#x432;&#x435;&#x440;&#x43D;&#x430;&#x44F; &#x41E;&#x441;&#x435;&#x442;&#x438;&#x44F; &#x2013; &#x410;&#x43B;&#x430;&#x43D;&#x438;&#x44F;</a>
-                                    <a href="news@tag=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%2522P0Q%2502P0Q.html">&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x422;&#x430;&#x442;&#x430;&#x440;&#x441;&#x442;&#x430;&#x43D;</a>
-                                    <a href="news@tag=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%2522Q%250BP2P0.html">&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x422;&#x44B;&#x432;&#x430;</a>
-                                    <a href="news@tag=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%2525P0P%253AP0Q%2501P8Q%250F.html">&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x425;&#x430;&#x43A;&#x430;&#x441;&#x438;&#x44F;</a>
-                                    <a href="news@tag=P%2520P%253EQ%2501Q%2502P%253EP2Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">&#x420;&#x43E;&#x441;&#x442;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%2520Q%250FP7P0P=Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">&#x420;&#x44F;&#x437;&#x430;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P!P0P%253CP0Q.html">&#x421;&#x430;&#x43C;&#x430;&#x440;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P!P0P=P%253AQ%2502-P%251FP5Q%2502P5Q.html">&#x421;&#x430;&#x43D;&#x43A;&#x442;-&#x41F;&#x435;&#x442;&#x435;&#x440;&#x431;&#x443;&#x440;&#x433;</a>
-                                    <a href="news@tag=P!P0Q.html">&#x421;&#x430;&#x440;&#x430;&#x442;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P!P0Q%2505P0P%3BP8P=Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">&#x421;&#x430;&#x445;&#x430;&#x43B;&#x438;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P!P2P5Q.html">&#x421;&#x432;&#x435;&#x440;&#x434;&#x43B;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P!P5P2P0Q%2501Q%2502P%253EP%25BFP%253EP%3BQ%250C.html">&#x421;&#x435;&#x432;&#x430;&#x441;&#x442;&#x43E;&#x43F;&#x43E;&#x43B;&#x44C;</a>
-                                    <a href="news@tag=P!P8P=Q%2505Q.html">&#x421;&#x438;&#x43D;&#x445;&#x440;&#x43E;&#x43D;&#x438;&#x437;&#x430;&#x446;&#x438;&#x44F; &#x440;&#x430;&#x431;&#x43E;&#x442;</a>
-                                    <a href="news@tag=P!P%253CP%253EP%3BP5P=Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">&#x421;&#x43C;&#x43E;&#x43B;&#x435;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P!P%253EQ%2506P8P0P%3BQ%250CP=P%253E%2520P7P=P0Q%2507P8P%253CQ%250BP5%2520P%253EP1Q%250AP5P%253AQ%2502Q%250B.html">&#x421;&#x43E;&#x446;&#x438;&#x430;&#x43B;&#x44C;&#x43D;&#x43E; &#x437;&#x43D;&#x430;&#x447;&#x438;&#x43C;&#x44B;&#x435; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x44B;</a>
-                                    <a href="news@tag=P!Q%2502P0P2Q.html">&#x421;&#x442;&#x430;&#x432;&#x440;&#x43E;&#x43F;&#x43E;&#x43B;&#x44C;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;</a>
-                                    <a href="news@tag=P%2522P0P%253CP1P%253EP2Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">&#x422;&#x430;&#x43C;&#x431;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%2522P2P5Q.html">&#x422;&#x432;&#x435;&#x440;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%2522P5Q%2505P=P%253EP%3BP%253EP3P8P8.html">&#x422;&#x435;&#x445;&#x43D;&#x43E;&#x43B;&#x43E;&#x433;&#x438;&#x438;</a>
-                                    <a href="news@tag=P%2522P%253EP%253CQ%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">&#x422;&#x43E;&#x43C;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%2522Q.html">&#x422;&#x440;&#x430;&#x43D;&#x441;&#x43F;&#x43E;&#x440;&#x442;</a>
-                                    <a href="news@tag=P%2522Q.html">&#x422;&#x440;&#x430;&#x43D;&#x441;&#x43F;&#x43E;&#x440;&#x442;&#x43D;&#x430;&#x44F; &#x43D;&#x435;&#x434;&#x435;&#x43B;&#x44F;</a>
-                                    <a href="news@tag=P%2522Q%2503P%3BQ%250CQ%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">&#x422;&#x443;&#x43B;&#x44C;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P%2522Q%2503Q.html">&#x422;&#x443;&#x440;&#x438;&#x441;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438;&#x439; &#x43C;&#x430;&#x440;&#x448;&#x440;&#x443;&#x442;</a>
-                                    <a href="news@tag=P%2522Q%250EP%253CP5P=Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">&#x422;&#x44E;&#x43C;&#x435;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P.html">&#x423;&#x434;&#x43C;&#x443;&#x440;&#x442;&#x441;&#x43A;&#x430;&#x44F; &#x440;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430;</a>
-                                    <a href="news@tag=P.html">&#x423;&#x43B;&#x438;&#x446;&#x430; &#x41F;&#x43E;&#x431;&#x435;&#x434;&#x44B;</a>
-                                    <a href="news@tag=P.html">&#x423;&#x43B;&#x438;&#x446;&#x44B; &#x43A;&#x43E;&#x441;&#x43C;&#x43E;&#x43D;&#x430;&#x432;&#x442;&#x43E;&#x432;</a>
-                                    <a href="news@tag=P.html">&#x423;&#x43B;&#x44C;&#x44F;&#x43D;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P$P8P=P0P=Q%2501P8Q.html">&#x424;&#x438;&#x43D;&#x430;&#x43D;&#x441;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;</a>
-                                    <a href="news@tag=P%2525P0P1P0Q.html">&#x425;&#x430;&#x431;&#x430;&#x440;&#x43E;&#x432;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;</a>
-                                    <a href="news@tag=P%2525P0P=Q%2502Q%250B-P%251CP0P=Q%2501P8P9Q%2501P%253AP8P9%2520P0P2Q%2502P%253EP=P%253EP%253CP=Q%250BP9%2520P%253EP%253AQ.html">&#x425;&#x430;&#x43D;&#x442;&#x44B;-&#x41C;&#x430;&#x43D;&#x441;&#x438;&#x439;&#x441;&#x43A;&#x438;&#x439; &#x430;&#x432;&#x442;&#x43E;&#x43D;&#x43E;&#x43C;&#x43D;&#x44B;&#x439; &#x43E;&#x43A;&#x440;&#x443;&#x433;</a>
-                                    <a href="news@tag=P%2525P%253EP4%2520Q.html">&#x425;&#x43E;&#x434; &#x440;&#x430;&#x431;&#x43E;&#x442;</a>
-                                    <a href="news@tag=P'P5P%3BQ%250FP1P8P=Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">&#x427;&#x435;&#x43B;&#x44F;&#x431;&#x438;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P'P5Q%2507P5P=Q%2501P%253AP0Q%250F%2520P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0.html">&#x427;&#x435;&#x447;&#x435;&#x43D;&#x441;&#x43A;&#x430;&#x44F; &#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430;</a>
-                                    <a href="news@tag=P'Q%2503P2P0Q%2508Q%2501P%253AP0Q%250F%2520Q.html">&#x427;&#x443;&#x432;&#x430;&#x448;&#x441;&#x43A;&#x430;&#x44F; &#x440;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430;</a>
-                                    <a href="news@tag=P'Q%2503P%253AP%253EQ%2502Q%2501P%253AP8P9%2520P0P2Q%2502P%253EP=P%253EP%253CP=Q%250BP9%2520P%253EP%253AQ.html">&#x427;&#x443;&#x43A;&#x43E;&#x442;&#x441;&#x43A;&#x438;&#x439; &#x430;&#x432;&#x442;&#x43E;&#x43D;&#x43E;&#x43C;&#x43D;&#x44B;&#x439; &#x43E;&#x43A;&#x440;&#x443;&#x433;</a>
-                                    <a href="news@tag=P%252FP%253CP0P%3BP%253E-P%251DP5P=P5Q%2506P%253AP8P9%2520P0P2Q%2502P%253EP=P%253EP%253CP=Q%250BP9%2520P%253EP%253AQ.html">&#x42F;&#x43C;&#x430;&#x43B;&#x43E;-&#x41D;&#x435;&#x43D;&#x435;&#x446;&#x43A;&#x438;&#x439; &#x430;&#x432;&#x442;&#x43E;&#x43D;&#x43E;&#x43C;&#x43D;&#x44B;&#x439; &#x43E;&#x43A;&#x440;&#x443;&#x433;</a>
-                                    <a href="news@tag=P%252FQ.html">&#x42F;&#x440;&#x43E;&#x441;&#x43B;&#x430;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                                    <a href="news@tag=P2Q%250BQ%2501Q%2502P0P2P%253AP0%2520%2522P%2514P%253EQ.html">&#x432;&#x44B;&#x441;&#x442;&#x430;&#x432;&#x43A;&#x430; &quot;&#x414;&#x43E;&#x440;&#x43E;&#x433;&#x430;&quot;</a>
+                                    <a href="news@tag=P%2510P%251FP%2512P%2513P%251A.html">АПВГК</a>
+                                    <a href="news@tag=P%2510P%3BQ%2502P0P9Q%2501P%253AP8P9%2520P%253AQ.html">АНОНС</a>
+                                    <a href="news@tag=P%2510P%253CQ%2503Q.html">БАТЕЦКИЙ РАЙОН</a>
+                                    <a href="news@tag=P%2510P=P%253EP=Q%2501.html">БЕЗОПАСНОСТЬ</a>
+                                    <a href="news@tag=P%2510Q.html">БОРОВИЧСКИЙ РАЙОН</a>
+                                    <a href="news@tag=P%2510Q%2501Q%2502Q.html">ВАЛДАЙСКИЙ РАЙОН</a>
+                                    <a href="news@tag=P%2511P5P7P%253EP%25BFP0Q%2501P=P%253EQ%2501Q%2502Q%250C.html">ВОЛОТОВСКИЙ РАЙОН</a>
+                                    <a href="news@tag=P%2511P5P%3BP3P%253EQ.html">ДЕМЯНСКИЙ РАЙОН</a>
+                                    <a href="news@tag=P%2511Q.html">ДОРОГИ К БОЛЬНИЦАМ</a>
+                                    <a href="news@tag=P%2512P%3BP0P4P8P%253CP8Q.html">ДОРОГИ К ШКОЛАМ</a>
+                                    <a href="news@tag=P%2512P%253EP%3BP3P%253EP3Q.html">ДОРОГИ К СОЦИАЛЬНО ЗНАЧИМЫМ ОБЪЕКТАМ</a>
+                                    <a href="news@tag=P%2512P%253EP%3BP%253EP3P%253EP4Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">ДОСТУПНАЯ СРЕДА</a>
+                                    <a href="news@tag=P%2512P%253EQ.html">ИТС</a>
+                                    <a href="news@tag=P%2514P%253EQ.html">ИТОГИ</a>
+                                    <a href="news@tag=P%2514P%253EQ.html">КАПИТАЛОЁСКИЕ ОБЪЕКТЫ</a>
+                                    <a href="news@tag=P%2514P%253EQ.html">КОНТРАКТАЦИЯ</a>
+                                    <a href="news@tag=P%2514P%253EQ.html">КОНТРОЛЬ</a>
+                                    <a href="news@tag=P%2514P%253EQ%2501Q%2502Q%2503P%25BFP=P0Q%250F%2520Q%2501Q.html">КРЕСТЕЦКИЙ РАЙОН</a>
+                                    <a href="news@tag=P%2515P2Q.html">ЛУЧШИЕ ПРАКТИКИ</a>
+                                    <a href="news@tag=P%2517P0P1P0P9P%253AP0P%3BQ%250CQ%2501P%253AP8P9%2520P%253AQ.html">ЛЮБЫТИНСКИЙ РАЙОН</a>
+                                    <a href="news@tag=P%2518P%2522P!.html">МАЛОВИШЕРСКИЙ РАЙОН</a>
+                                    <a href="news@tag=P%2518P2P0P=P%253EP2Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">МАРЁВСКИЙ ОКРУГ</a>
+                                    <a href="news@tag=P%2518Q.html">МНЕНИЕ</a>
+                                    <a href="news@tag=P%2518Q%2502P%253EP3P8.html">ИТОГИ</a>
+                                    <a href="news@tag=P%25251AP%252516P.html">МОСТЫ И ПУТЕПРОВОДЫ</a>
+                                    <a href="news@tag=P%251AP0P1P0Q.html">МОШЕНСКОЙ РАЙОН</a>
+                                    <a href="news@tag=P%251AP0P%3BP8P=P8P=P3Q.html">НОВГОРОДСКИЙ РАЙОН</a>
+                                    <a href="news@tag=P%251AP0P%3BQ%2503P6Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">ОБНОВЛЕНИЕ ТРАНСПОРТА</a>
+                                    <a href="news@tag=P%251AP0P%253CQ%2507P0Q%2502Q%2501P%253AP8P9%2520P%253AQ.html">ОБЩЕСТВЕННОСТЬ</a>
+                                    <a href="news@tag=P%251AP0P%25BFP8Q%2502P0P%3BP%253EP5P%253CP%253AP8P5%2520P%253EP1Q%250AP5P%253AQ%2502Q%250B.html">ОБЩЕСТВЕННЫЙ КОНТРОЛЬ</a>
+                                    <a href="news@tag=P%251AP0Q.html">ОКУЛОВСКИЙ РАЙОН</a>
+                                    <a href="news@tag=P%251AP5P%253CP5Q.html">ПАРФИНСКИЙ РАЙОН</a>
+                                    <a href="news@tag=P%251AP8Q.html">ПЕСТОВСКИЙ РАЙОН</a>
+                                    <a href="news@tag=P%251AP%253EP=Q%2502Q.html">ПЛАНЫ</a>
+                                    <a href="news@tag=P%251AP%253EP=Q%2502Q.html">ПОДДОРСКИЙ РАЙОН</a>
+                                    <a href="news@tag=P%251AP%253EQ%2501Q%2502Q.html">РАЗВИТИЕ ФЕДЕРАЛЬНОЙ ДОРОЖНОЙ СЕТИ</a>
+                                    <a href="news@tag=P%251AQ.html">СИНХРОНИЗАЦИЯ РАБОТ</a>
+                                    <a href="news@tag=P%251AQ.html">СОЛЕЦКИЙ ОКРУГ</a>
+                                    <a href="news@tag=P%251AQ%2503Q.html">СОЦИАЛЬНО ЗНАЧИМЫЕ ОБЪЕКТЫ</a>
+                                    <a href="news@tag=P%251AQ%2503Q.html">СТАРОРУССКИЙ РАЙОН</a>
+                                    <a href="news@tag=P%251BP5P=P8P=P3Q.html">ТЕХНОЛОГИИ</a>
+                                    <a href="news@tag=P%251BP8P%25BFP5Q%2506P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">ТРАНСПОРТ</a>
+                                    <a href="news@tag=P%251BQ%2503Q%2507Q%2508P8P5%2520P%25BFQ.html">ТУРИСТИЧЕСКИЙ МАРШРУТ</a>
+                                    <a href="news@tag=P%251CP0P3P0P4P0P=Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">ФИНАНСИРОВАНИЕ</a>
+                                    
+                                    <a href="news@tag=P%252525P%25253EP4%252520Q.html">ХОД РАБОТ</a>
+                                    <a href="news@tag=P'P5P%3BQ%250FP1P8P=Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">ХВОЙНИНСКИЙ РАЙОН</a>
+                                    <a href="news@tag=P'P5Q%2507P5P=Q%2501P%253AP0Q%250F%2520P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0.html">ХОЛМСКИЙ РАЙОН</a>
+                                    <a href="news@tag=P'Q%2503P2P0Q%2508Q%2501P%253AP0Q%250F%2520Q.html">ЧУДОВСКИЙ РАЙОН</a>
+                                    <a href="news@tag=P%252FQ.html">ШИМСКИЙ РАЙОН</a>
+                                    
                         </div>
                     </div>
                 </div>
-                <div class="nt_search">
-                    <form action="news.html" method="post">
-                        <input type="search" name="searchString" placeholder="&#x41F;&#x41E;&#x418;&#x421;&#x41A; &#x41F;&#x41E; &#x41D;&#x41E;&#x412;&#x41E;&#x421;&#x422;&#x418;" value="" />
-                        <input type="hidden" name="tag" value="" />
-                        <a type="nts_btn"></a>
-                    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8PEB9kw2TUJNn4s9Y8lTMh-Qma1jm9OoFhdtalFzUaj5TkhfX5J3ltGlMZs_fm6H7Sm-zMq-2HdJBJpite8JE7NuUVEThUnlPQt7u_hrIHeT2aja4oGbnySWLqF_eTqjHJHLAbeTzSWyx81jw8Xx4TA" /></form>
-                </div>
+               
             </div>
         </div>
         <div class="row news_wp">
+
+
             <div class="news_block_m col-lg-4 col-md-6">
-    <a target="_blank" href="news/read/v-respublike-kareliya-prodolzhitsya-remont-regionalnyh-trass-vedushchih-k-turisticheskim-mestam.html">
-            <div class="nb_img">
-                <img src="https://novgorod.bkdrf.ru/uploads/news2.0/&amp;" alt="&#x412; &#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x435; &#x41A;&#x430;&#x440;&#x435;&#x43B;&#x438;&#x44F; &#x43F;&#x440;&#x43E;&#x434;&#x43E;&#x43B;&#x436;&#x438;&#x442;&#x441;&#x44F; &#x440;&#x435;&#x43C;&#x43E;&#x43D;&#x442; &#x440;&#x435;&#x433;&#x438;&#x43E;&#x43D;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x445; &#x442;&#x440;&#x430;&#x441;&#x441;, &#x432;&#x435;&#x434;&#x443;&#x449;&#x438;&#x445; &#x43A; &#x442;&#x443;&#x440;&#x438;&#x441;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438;&#x43C; &#x43C;&#x435;&#x441;&#x442;&#x430;&#x43C;" />
+                <a target="_blank" href="news/read/reid-savino-selischi.html">
+                        <div class="nb_img">
+                            <img src="uploads/news/16_12_22/reid3.jpg" />
+                        </div>
+                        <a target="_blank" class="nb_link" href="news/read/reid-savino-selischi.html">
+                            Рейд по опорной сети дорог Новгородского района для проверки качества зимнего содержания
+                        </a>
+                </a>
+                <div class="nb_tags flex">
+                    <a href="news@tag=P%251AP0P%25BFP8Q%2502P0P%3BP%253EP5P%253CP%253AP8P5%2520P%253EP1Q%250AP5P%253AQ%2502Q%250B.html">ОБЩЕСТВЕННЫЙ КОНТРОЛЬ</a>
+                    <a href="news@tag=P%2514P%253EQ.html">КОНТРОЛЬ</a>
+                    <a href="news@tag=P%252525P%25253EP4%252520Q.html">ХОД РАБОТ</a>
+                 
+                </div>       
+                <p class="nb_data1">16 ДЕКАБРЯ 2022</p>
+               
+            
             </div>
-            <a target="_blank" class="nb_link" href="news/read/v-respublike-kareliya-prodolzhitsya-remont-regionalnyh-trass-vedushchih-k-turisticheskim-mestam.html">
-                В Республике Карелия продолжится ремонт региональных трасс, ведущих к туристическим местам
+
+            <div class="news_block_m col-lg-4 col-md-6">
+                <a target="_blank" href="news/read/itogi-rabot-s-obschestvennost'yu-2022.html">
+                        <div class="nb_img">
+                            <img src="uploads/news/15_12_22/prewiews/obschestvennost1.jpg" />
+                        </div>
+                        <a target="_blank" class="nb_link" href="news/read/itogi-rabot-s-obschestvennost'yu-2022.html">
+                            Итоги работ с общественностью в рамках дорожного нацпроекта в 2022 году
+                        </a>
+                </a>
+                <div class="nb_tags flex">
+                    <a href="news@tag=P%251AP0P%25BFP8Q%2502P0P%3BP%253EP5P%253CP%253AP8P5%2520P%253EP1Q%250AP5P%253AQ%2502Q%250B.html">ОБЩЕСТВЕННЫЙ КОНТРОЛЬ</a>
+                    <a href="news@tag=P%2518Q%2502P%253EP3P8.html">ИТОГИ</a> 
+                 
+                </div>       
+                <p class="nb_data1">15 ДЕКАБРЯ 2022</p>
+               
+            
+            </div>
+
+
+            <div class="news_block_m col-lg-4 col-md-6">
+                <a target="_blank" href="news/read/zimnee-soderzhanie-inter.html">
+                        <div class="nb_img">
+                            <img src="uploads/news/14_12_22/prewiews/zimnee.jpg" />
+                        </div>
+                        <a target="_blank" class="nb_link" href="news/read/zimnee-soderzhanie-inter.html">
+                            Константин Куранов рассказал о зимнем содержании дорог в регионе
+                        </a>
+                </a>
+                <div class="nb_tags flex">
+                          
+                 
+                </div>       
+                <p class="nb_data1">14 ДЕКАБРЯ 2022</p>
+               
+            
+            </div>
+
+            <div class="news_block_m col-lg-4 col-md-6">
+                <a target="_blank" href="news/read/proverka-kachestva-protivogololednyh.html">
+                        <div class="nb_img">
+                            <img src="uploads/news/14_12_22/prewiews/PSS1.jpg" />
+                        </div>
+                        <a target="_blank" class="nb_link" href="news/read/proverka-kachestva-protivogololednyh.html">
+                            Очередная проверка качества противогололёдных материалов
+                        </a>
+                </a>
+                <div class="nb_tags flex">
+                    <a href="news@tag=P%2514P%253EQ.html">КОНТРОЛЬ</a>        
+                 
+                </div>       
+                <p class="nb_data1">14 ДЕКАБРЯ 2022</p>
+               
+            
+            </div>
+
+            <div class="news_block_m col-lg-4 col-md-6">
+                <a target="_blank" href="news/read/otkryty-2-mosta.html">
+                        <div class="nb_img">
+                            <img src="uploads/news/12_12_22/prewiews/2-mosta.jpg" />
+                        </div>
+                        <a target="_blank" class="nb_link" href="news/read/otkryty-2-mosta.html">
+                            Открыто движение на двух мостах в Любытинском и Пестовском районах
+                        </a>
+                </a>
+                <div class="nb_tags flex">
+                    <a href="news@tag=P%2517P0P1P0P9P%253AP0P%3BQ%250CQ%2501P%253AP8P9%2520P%253AQ.html">ЛЮБЫТИНСКИЙ РАЙОН</a>        
+                    <a href="news@tag=P%251AP8Q.html">ПЕСТОВСКИЙ РАЙОН</a>        
+                    <a href="news@tag=P%25251AP%252516P.html">МОСТЫ И ПУТЕПРОВОДЫ</a>
+                    <a href="news@tag=P%252525P%25253EP4%252520Q.html">ХОД РАБОТ</a>
+                </div>       
+                <p class="nb_data1">12 ДЕКАБРЯ 2022</p>
+               
+            
+            </div>
+
+
+
+            <div class="news_block_m col-lg-4 col-md-6">
+    <a target="_blank" href="news/read/rabota-v-snegopad-inter.html">
+            <div class="nb_img">
+                <img src="uploads/news/07_12_22/efir.jpg" />
+            </div>
+            <a target="_blank" class="nb_link" href="news/read/rabota-v-snegopad-inter.html">
+                Состоялся прямой эфир, посвящённый работе дорожных служб в условиях снегопадов
             </a>
     </a>
-    <div class="nb_tags flex">
-                <a href="news@tag=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%251AP0Q.html">&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x41A;&#x430;&#x440;&#x435;&#x43B;&#x438;&#x44F;</a>
-                <a href="news@tag=P%251FP%3BP0P=Q%250B.html">&#x41F;&#x43B;&#x430;&#x43D;&#x44B;</a>
-                <a href="news@tag=P%2522Q%2503Q.html">&#x422;&#x443;&#x440;&#x438;&#x441;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438;&#x439; &#x43C;&#x430;&#x440;&#x448;&#x440;&#x443;&#x442;</a>
-    </div>
-    <p class="nb_data1">18 &#x444;&#x435;&#x432;&#x440;&#x430;&#x43B;&#x44F; 2022</p>
+    
+    <p class="nb_data1">07 ДЕКАБРЯ 2022</p>
 
 </div>
 <div class="news_block_m col-lg-4 col-md-6">
-    <a target="_blank" href="news/read/v-krasnoyarskom-krae-smontirovan-eshche-odin-prolet-vysokogorskogo-mosta.html">
+    <a target="_blank" href="news/read/ochistka-dorog-06-12.htmll">
             <div class="nb_img">
-                <img src="https://novgorod.bkdrf.ru/uploads/news2.0/&amp;" alt="&#x412; &#x41A;&#x440;&#x430;&#x441;&#x43D;&#x43E;&#x44F;&#x440;&#x441;&#x43A;&#x43E;&#x43C; &#x43A;&#x440;&#x430;&#x435; &#x441;&#x43C;&#x43E;&#x43D;&#x442;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D; &#x435;&#x449;&#x435; &#x43E;&#x434;&#x438;&#x43D; &#x43F;&#x440;&#x43E;&#x43B;&#x435;&#x442; &#x412;&#x44B;&#x441;&#x43E;&#x43A;&#x43E;&#x433;&#x43E;&#x440;&#x441;&#x43A;&#x43E;&#x433;&#x43E; &#x43C;&#x43E;&#x441;&#x442;&#x430;" />
+                <img src="uploads/news/06_12_2022/prewiews/ochistka.jpg" />
             </div>
-            <a target="_blank" class="nb_link" href="news/read/v-krasnoyarskom-krae-smontirovan-eshche-odin-prolet-vysokogorskogo-mosta.html">
-                В Красноярском крае смонтирован еще один пролет Высокогорского моста
+            <a target="_blank" class="nb_link" href="news/read/ochistka-dorog-06-12.html">
+                Специалисты ГОКУ «Новгородавтодор» осуществили проверку качества содержания региональных дорог в зимний период
             </a>
     </a>
     <div class="nb_tags flex">
-                <a href="news@tag=P%251AQ.html">&#x41A;&#x440;&#x430;&#x441;&#x43D;&#x43E;&#x44F;&#x440;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;</a>
-                <a href="news@tag=P%251AP0P%25BFP8Q%2502P0P%3BP%253EP5P%253CP%253AP8P5%2520P%253EP1Q%250AP5P%253AQ%2502Q%250B.html">&#x41A;&#x430;&#x43F;&#x438;&#x442;&#x430;&#x43B;&#x43E;&#x435;&#x43C;&#x43A;&#x438;&#x435; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x44B;</a>
-                <a href="news@tag=P%2525P%253EP4%2520Q.html">&#x425;&#x43E;&#x434; &#x440;&#x430;&#x431;&#x43E;&#x442;</a>
-    </div>
-    <p class="nb_data1">18 &#x444;&#x435;&#x432;&#x440;&#x430;&#x43B;&#x44F; 2022</p>
+                <a href="news@tag=P%252525P%25253EP4%252520Q.html">ХОД РАБОТ</a>
+                <a href="news@tag=P%2514P%253EQ.html">КОНТРОЛЬ</a>
+    </div>       
+    <p class="nb_data1">06 ДЕКАБРЯ 2022</p>
+   
 
 </div>
 <div class="news_block_m col-lg-4 col-md-6">
-    <a target="_blank" href="news/read/na-regionalnoy-seti-dorog-v-amurskoy-oblasti-ustanovyat-pervyy-avtomaticheskiy-punkt-vesogabaritnogo-kontrolya.html">
+    <a target="_blank" href="news/read/podgotovka-radbelik-peschanoe.html">
             <div class="nb_img">
-                <img src="https://novgorod.bkdrf.ru/uploads/18_02_22/previews/&amp;" alt="&#x41D;&#x430; &#x440;&#x435;&#x433;&#x438;&#x43E;&#x43D;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x439; &#x441;&#x435;&#x442;&#x438; &#x434;&#x43E;&#x440;&#x43E;&#x433; &#x432; &#x410;&#x43C;&#x443;&#x440;&#x441;&#x43A;&#x43E;&#x439; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x438; &#x443;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x44F;&#x442; &#x43F;&#x435;&#x440;&#x432;&#x44B;&#x439; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438;&#x439; &#x43F;&#x443;&#x43D;&#x43A;&#x442; &#x432;&#x435;&#x441;&#x43E;&#x433;&#x430;&#x431;&#x430;&#x440;&#x438;&#x442;&#x43D;&#x43E;&#x433;&#x43E; &#x43A;&#x43E;&#x43D;&#x442;&#x440;&#x43E;&#x43B;&#x44F;" />
+                <img src="uploads/news/27_11_2022/prewiews/radbelik.jpg" />
             </div>
-            <a target="_blank" class="nb_link" href="news/read/na-regionalnoy-seti-dorog-v-amurskoy-oblasti-ustanovyat-pervyy-avtomaticheskiy-punkt-vesogabaritnogo-kontrolya.html">
-                На региональной сети дорог в Амурской области установят первый автоматический пункт весогабаритного контроля
+            <a target="_blank" class="nb_link" href="news/read/podgotovka-radbelik-peschanoe.html">
+                В Новгородском районе идут подготовительные работы для асфальтирования трассы Радбелик – Песчаное
             </a>
     </a>
     <div class="nb_tags flex">
-                <a href="news@tag=P%2510P%253CQ%2503Q.html">&#x410;&#x43C;&#x443;&#x440;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                <a href="news@tag=P%2510P%251FP%2512P%2513P%251A.html">&#x410;&#x41F;&#x412;&#x413;&#x41A;</a>
+                <a href="news@tag=P%251AP0P%3BP8P=P8P=P3Q.html">НОВГОРОДСКИЙ РАЙОН</a>
+                <a href="news@tag=P%252525P%25253EP4%252520Q.html">ХОД РАБОТ</a>
     </div>
-    <p class="nb_data1">18 &#x444;&#x435;&#x432;&#x440;&#x430;&#x43B;&#x44F; 2022</p>
+    <p class="nb_data1">27 НОЯБРЯ 2022</p>
 
 </div>
 <div class="news_block_m col-lg-4 col-md-6">
-    <a target="_blank" href="news/read/v-kochubeevskom-okruge-stavropolya-v-tekushchem-godu-otremontiruyut-bolee-11-km-dorog.html">
+    <a target="_blank" href="news/read/v-batetskom-novgorodskom-i-shimskom.html">
             <div class="nb_img">
-                <img src="uploads/18_02_22/previews/20200616_7757.jpg@v=OT53UH4KmLW-RoRrd2nJnCuqKWo46a1Vjrk_czWahCM" alt="&#x412; &#x41A;&#x43E;&#x447;&#x443;&#x431;&#x435;&#x435;&#x432;&#x441;&#x43A;&#x43E;&#x43C; &#x43E;&#x43A;&#x440;&#x443;&#x433;&#x435; &#x421;&#x442;&#x430;&#x432;&#x440;&#x43E;&#x43F;&#x43E;&#x43B;&#x44C;&#x44F; &#x432; &#x442;&#x435;&#x43A;&#x443;&#x449;&#x435;&#x43C; &#x433;&#x43E;&#x434;&#x443; &#x43E;&#x442;&#x440;&#x435;&#x43C;&#x43E;&#x43D;&#x442;&#x438;&#x440;&#x443;&#x44E;&#x442; &#x431;&#x43E;&#x43B;&#x435;&#x435; 11 &#x43A;&#x43C; &#x434;&#x43E;&#x440;&#x43E;&#x433;" />
+                <img src="uploads/news/20_11_22/prewiews/110km.jpg" />
             </div>
-            <a target="_blank" class="nb_link" href="news/read/v-kochubeevskom-okruge-stavropolya-v-tekushchem-godu-otremontiruyut-bolee-11-km-dorog.html">
-                В Кочубеевском округе Ставрополья в текущем году отремонтируют более 11 км дорог
+            <a target="_blank" class="nb_link" href="news/read/v-batetskom-novgorodskom-i-shimskom.html">
+                В Батецком, Новгородском и Шимском районах отремонтируют 110 км дорог до октября 2024 года
             </a>
     </a>
     <div class="nb_tags flex">
-                <a href="news@tag=P!Q%2502P0P2Q.html">&#x421;&#x442;&#x430;&#x432;&#x440;&#x43E;&#x43F;&#x43E;&#x43B;&#x44C;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x440;&#x430;&#x439;</a>
-                <a href="news@tag=P%2525P%253EP4%2520Q.html">&#x425;&#x43E;&#x434; &#x440;&#x430;&#x431;&#x43E;&#x442;</a>
+                <a href="news@tag=P%251AP0P%25BFP8Q%2502P0P%3BP%253EP5P%253CP%253AP8P5%2520P%253EP1Q%250AP5P%253AQ%2502Q%250B.html">РЕМОНТ</a>
+                <a href="news@tag=P%2525P%253EP4%2520Q.html">ПЛАНЫ</a>
+                <a href="news@tag=P%251AQ.html">БАТЕЦКИЙ РАЙОН</a>
+                <a href="news@tag=P%251AQ.html">НОВГОРОДСКИЙ РАЙОН</a>
+                <a href="news@tag=P%251AQ.html">ШИМСКИЙ РАЙОН</a>
     </div>
-    <p class="nb_data1">18 &#x444;&#x435;&#x432;&#x440;&#x430;&#x43B;&#x44F; 2022</p>
+    <p class="nb_data1">20 НОЯБРЯ 2022</p>
+
+</div>
+
+
+
+<div class="news_block_m col-lg-4 col-md-6">
+    <a target="_blank" href="news/read/k-zime-gotovi.html">
+            <div class="nb_img">
+                <img src="uploads/news/27_11_2022/prewiews/gotovi.jpg"  />
+            </div>
+            <a target="_blank" class="nb_link" href="news/read/k-zime-gotovi.html">
+                Дорожные службы осуществляют круглосуточное патрулирование на областных дорогах
+            </a>
+    </a>
+    <div class="nb_tags flex">
+                <a href="news@tag=P%252525P%25253EP4%252520Q.html">ХОД РАБОТ</a>
+                
+    </div>
+    <p class="nb_data1">27 НОЯБРЯ 2022</p>
 
 </div>
 <div class="news_block_m col-lg-4 col-md-6">
-    <a target="_blank" href="news/read/uchastok-trassy-maloyaroslavets--borovsk-v-kaluzhskoy-oblasti-otremontiruyut-po-obrashcheniyam-zhiteley.html">
+    <a target="_blank" href="news/read/sezon-ne-okonchen.html">
             <div class="nb_img">
-                <img src="https://novgorod.bkdrf.ru/uploads/news/17_02_22/previews/&amp;" alt="&#x423;&#x447;&#x430;&#x441;&#x442;&#x43E;&#x43A; &#x442;&#x440;&#x430;&#x441;&#x441;&#x44B; &#x41C;&#x430;&#x43B;&#x43E;&#x44F;&#x440;&#x43E;&#x441;&#x43B;&#x430;&#x432;&#x435;&#x446; &#x2013; &#x411;&#x43E;&#x440;&#x43E;&#x432;&#x441;&#x43A; &#x432; &#x41A;&#x430;&#x43B;&#x443;&#x436;&#x441;&#x43A;&#x43E;&#x439; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x438; &#x43E;&#x442;&#x440;&#x435;&#x43C;&#x43E;&#x43D;&#x442;&#x438;&#x440;&#x443;&#x44E;&#x442; &#x43F;&#x43E; &#x43E;&#x431;&#x440;&#x430;&#x449;&#x435;&#x43D;&#x438;&#x44F;&#x43C; &#x436;&#x438;&#x442;&#x435;&#x43B;&#x435;&#x439;" />
+                <img src="uploads/news/22_11_22/prewiews/ne_zakonchen.jpg" />
             </div>
-            <a target="_blank" class="nb_link" href="news/read/uchastok-trassy-maloyaroslavets--borovsk-v-kaluzhskoy-oblasti-otremontiruyut-po-obrashcheniyam-zhiteley.html">
-                Участок трассы Малоярославец – Боровск в Калужской области отремонтируют по обращениям жителей
+            <a target="_blank" class="nb_link" href="news/read/sezon-ne-okonchen.html">
+                Дорожный сезон ещё не окончен
             </a>
     </a>
     <div class="nb_tags flex">
-                <a href="news@tag=P%251AP0P%3BQ%2503P6Q%2501P%253AP0Q%250F%2520P%253EP1P%3BP0Q%2501Q%2502Q%250C.html">&#x41A;&#x430;&#x43B;&#x443;&#x436;&#x441;&#x43A;&#x430;&#x44F; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44C;</a>
-                <a href="news@tag=P!P%253EQ%2506P8P0P%3BQ%250CP=P%253E%2520P7P=P0Q%2507P8P%253CQ%250BP5%2520P%253EP1Q%250AP5P%253AQ%2502Q%250B.html">&#x421;&#x43E;&#x446;&#x438;&#x430;&#x43B;&#x44C;&#x43D;&#x43E; &#x437;&#x43D;&#x430;&#x447;&#x438;&#x43C;&#x44B;&#x435; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x44B;</a>
+        <a href="news@tag=P%252FQ.html">ШИМСКИЙ РАЙОН</a>       
+        <a href="news@tag=P%251AQ%2503Q.html">СТАРОРУССКИЙ РАЙОН</a>
+        <a href="news@tag=P%251AP0P%3BP8P=P8P=P3Q.html">НОВГОРОДСКИЙ РАЙОН</a>       
+        <a href="news@tag=P%252525P%25253EP4%252520Q.html">ХОД РАБОТ</a>
     </div>
-    <p class="nb_data1">17 &#x444;&#x435;&#x432;&#x440;&#x430;&#x43B;&#x44F; 2022</p>
-
-</div>
-<div class="news_block_m col-lg-4 col-md-6">
-    <a target="_blank" href="news/read/v-respublike-ingushetiya-v-tekushchem-godu-obnovyat-bolee-17-km-dorog-po-natsproektu.html">
-            <div class="nb_img">
-                <img src="https://novgorod.bkdrf.ru/uploads/news/17_02_22/previews/&amp;" alt="&#x412; &#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x435; &#x418;&#x43D;&#x433;&#x443;&#x448;&#x435;&#x442;&#x438;&#x44F; &#x432; &#x442;&#x435;&#x43A;&#x443;&#x449;&#x435;&#x43C; &#x433;&#x43E;&#x434;&#x443; &#x43E;&#x431;&#x43D;&#x43E;&#x432;&#x44F;&#x442;&#xA0;&#xA0;&#x431;&#x43E;&#x43B;&#x435;&#x435; 17 &#x43A;&#x43C; &#x434;&#x43E;&#x440;&#x43E;&#x433; &#x43F;&#x43E; &#x43D;&#x430;&#x446;&#x43F;&#x440;&#x43E;&#x435;&#x43A;&#x442;&#x443;" />
-            </div>
-            <a target="_blank" class="nb_link" href="news/read/v-respublike-ingushetiya-v-tekushchem-godu-obnovyat-bolee-17-km-dorog-po-natsproektu.html">
-                В Республике Ингушетия в текущем году обновят  более 17 км дорог по нацпроекту
-            </a>
-    </a>
-    <div class="nb_tags flex">
-                <a href="news@tag=P%2520P5Q%2501P%25BFQ%2503P1P%3BP8P%253AP0%2520P%2518P=P3Q%2503Q%2508P5Q%2502P8Q%250F.html">&#x420;&#x435;&#x441;&#x43F;&#x443;&#x431;&#x43B;&#x438;&#x43A;&#x430; &#x418;&#x43D;&#x433;&#x443;&#x448;&#x435;&#x442;&#x438;&#x44F;</a>
-                <a href="news@tag=P%251FP%3BP0P=Q%250B.html">&#x41F;&#x43B;&#x430;&#x43D;&#x44B;</a>
-    </div>
-    <p class="nb_data1">17 &#x444;&#x435;&#x432;&#x440;&#x430;&#x43B;&#x44F; 2022</p>
+    <p class="nb_data1">22 НОЯБРЯ 2022</p>
 
 </div>
 <div class="news_block_m col-lg-4 col-md-6">
@@ -836,13 +1126,29 @@
 
 </div>
         </div>
-        <a href="news.html#" class="load-more" data-skip="21" data-take="21" data-all="3128" style="display:none;">
-            Загрузить еще
-        </a>
+        <div class="btn-center">
+        <button class="show-more">Загрузить ещё</button>
+        </div>
     </div>
 </div>
 
+<script>
+    const showMore = document.querySelector('.show-more');
+    const productsLength = document.querySelectorAll('.news_block_m.col-lg-4.col-md-6').length;
+    let items = 18;
 
+    showMore.addEventListener('click', () => {
+        items += 3;
+        const array = Array.from(document.querySelector('.row.news_wp').children);
+        const visItems = array.slice(0, items);
+
+        visItems.forEach(el => el.classList.add('is-visible'));
+
+        if (visItems.length === productsLength) {
+            showMore.style.display = 'none';
+        }
+    })
+</script>
 
 
 <footer class="footer">
@@ -852,7 +1158,7 @@
                 <nav class="footer__nav-container">
                     <span class="footer__nav-link -about"><a href="about.html">О нацпроекте</a></span>
                     <span class="footer__nav-link"><a href="news.html">Новости</a></span>
-                    <span class="footer__nav-link"><a href="map.1.html">Карта</a></span>
+                    <span class="footer__nav-link"><a href="map/velikiy-novgorod.html">Карта</a></span>
                     <span class="footer__nav-link"><a href="reception/polls.html">Дороги для людей</a></span>
                     <span class="footer__nav-link"><a href="gallery.html">Фотобанк</a></span>
                     <span class="footer__nav-link"><a href="massmedia.html">Пресс-центр</a></span>
@@ -862,17 +1168,17 @@
             <div class="footer__partners">
                 <div class="footer__partners-list">
                         <div class="footer__partners-item">
-                            <a href="https://www.mintrans.ru/" target="_blank" class="footer__partners-link">
+                            <a href="https://mintrans.novreg.ru/" target="_blank" class="footer__partners-link">
                                 <img src="images/new-design/footer/gerb1.png@v=LtL0zz-LxRHxuFqBLIp49x1TiK3c0xn2wYoVSFrUP-E" alt="mintrans" />
                             </a>
                         </div>
                         <div class="footer__partners-item">
-                            <a href="http://информавтодор.рф/" target="_blank" class="footer__partners-link">
+                            <a href="http://novgorodavtodor.ru/" target="_blank" class="footer__partners-link">
                                 <img src="images/new-design/footer/gerb2.png@v=4VCz4krOuiwNesdLrahYPy7RdXSpp2IFvqAPoYN1m8g" alt="inform-grey" />
                             </a>
                         </div>
                         <div class="footer__partners-item">
-                            <a href="http://www.rosdornii.ru/" target="_blank" class="footer__partners-link">
+                            <a href="https://vk.com/bkadnovgorod" target="_blank" class="footer__partners-link">
                                 <img src="images/new-design/footer/gerb3.png@v=ClplrQinIAU-aNAAnywhHKQTqGmMA94jFkM6oJQGxaM" alt="rosdornii-colour" alt="" />
                             </a>
                         </div>
